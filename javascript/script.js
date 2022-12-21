@@ -14,9 +14,9 @@ function validoInput(){
 
 var i = 0;
  var imgArray = [
- "./images/slider5.jpg",
- "./images/slider8.jpg",
-"./images/slider9.jpg"
+ "./images/test1.jpg",
+ "./images/test2.jpg",
+"./images/test3.jpg"
  ];
 
 
@@ -28,7 +28,7 @@ if (i < imgArray.length - 1 ) {
 }else {
     i=0;
 }
-setTimeout("ndrroImg()", 1500)
+setTimeout("ndrroImg()", 4000)
 }
 document.body.addEventListener('load', ndrroImg());
 

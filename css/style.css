@@ -22,7 +22,7 @@ a{
 
  
 #header1 ul{
-    list-style: none;
+    list-style:none;
     display:flex;
     align-items: center;
 }
@@ -35,40 +35,52 @@ a{
 #header1{
     align-items:center;
     justify-content:space-between;
-    height:2cm;
-    padding:10px;
+    height:1.7cm;
+    width:100%;
+    /* padding:10px; */
+    /* e heka qet padding */
     font-size:17.5px;
     display:flex;
     flex-direction:initial;
     background-color: #f3f3ec;
+    position:absolute;
 }
 #header1 ul li{
     color: #13765b;
-    margin-left: 32.5px;
+    margin-left:32.5px;
     padding: 5px;
 }
+
 #header1 ul li:hover{
     text-decoration: underline;
 }
 #header1 a{
     color: #13765b;
 }
-
-#banner{
-    background-color: #7caf9c;
-    height: 1cm;
-    text-align: center;
-    padding-bottom: 10px;
-    margin: 0px 0px;
-    color: #f3f3ec;
+#head2 ul li{
+    margin-right: 50px;
 }
 
+#banner{
+    background-image: linear-gradient(#0b5d47,#13765b );
+    /* background-color: #13765b; */
+    height: 1cm;
+    text-align: center;
+    /* padding-bottom: 10px; */
+    margin-top: 1.7cm;
+    color: #f3f3ec;
+    padding-top:5px;
+}
+
+h3{
+     margin:0px;
+}
 
 #fotoPare{
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 18.5cm;
+    height: 17cm;
     background-color: #bacbc1;
     color: white;
 }
@@ -76,20 +88,23 @@ a{
 #teksti{
     display: flex;
     flex-direction: column;
-    width: 60%;
-    height: 18.5cm;
+    width: 65%;
+    height: 17cm;
     align-items: flex-start;
     margin-left: 40px;
-    font-size: 25px;
-    padding-top: 7.5cm;
+    font-size: 20px;
+    padding-top: 6cm;
     color: #f3f3ec;
+}
+#teksti p{
+    font-size:37px;
 }
 
 #foto{
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    height: 18.5cm;
+    height: 17cm;
 }
 
 /* #foto{
@@ -149,6 +164,7 @@ a{
     align-items: center;
     margin:50px 15%;
   }
+  
   .katrorat{
     height:500px;
     width:100%;
@@ -156,6 +172,7 @@ a{
     justify-content: center;
     align-items: center;
   }
+  
 
   
 /* .katrorat{
@@ -245,6 +262,13 @@ a{
 .divs{
     height: 10cm;
     width: 7.5cm;
+}
+
+.divs:hover{
+    transform: scale(1.2);
+    transition: transform .2s;
+    cursor:pointer;
+    /* box-shadow:10px 10px 10px #262626; */
 }
 
 .tekstet{

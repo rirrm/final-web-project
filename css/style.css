@@ -56,11 +56,13 @@ a{
 
 #banner{
     background-color: #7caf9c;
-    height: 0.5cm;
+    height: 1cm;
     text-align: center;
-    padding: 15px;
+    padding-bottom: 10px;
+    margin: 0px 0px;
     color: #f3f3ec;
 }
+
 
 #fotoPare{
     display: flex;
@@ -74,9 +76,10 @@ a{
 #teksti{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
     height: 18.5cm;
-    align-items: center;
+    align-items: flex-start;
+    margin-left: 40px;
     font-size: 25px;
     padding-top: 7.5cm;
     color: #f3f3ec;
@@ -97,19 +100,53 @@ a{
     background-size: 100% 100%;
 } */
 
-#btn1{
-    margin:11px;
+/* main{
+    background-color: #f3f3ec;
+} */
+ #btn1{
+    margin:0px;
     margin-left: auto;
-    width: 2.5cm;
-    height:25px;
+    width: 5cm;
+    height:50px;
     border:0px;
     background-color:#c6dad1;
     border-radius: 50px;
     font-size:larger;
-    color: #ebf0fc;
+    transition: all 0.5s;
+    cursor: pointer;
+    color: #f3f3ec;
 }
 
-.katrorat{
+#btn1 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+#btn1 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+#btn1:hover span {
+    padding-right: 25px;
+  }
+  
+#btn1:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+#slideshow{
+    width: 100%;
+    height: 500px;
+  }
+/* .katrorat{
     align-items:center;
     justify-content:space-around;
     height:17.5cm;
@@ -120,9 +157,9 @@ a{
     background-color:#bacbc1 ;
     text-align: center;
     /* margin-top: 250px; */
-}
+} */
 
-#ing:hover{
+/* #ing:hover{
     transform: scale(1.2);
 }
 
@@ -141,7 +178,7 @@ a{
     padding:0.5cm;
     border-radius: 1.5ch;
     box-shadow: 6px 6px 1px 0.5px gray;
-}
+} */
 
 #form{
     background-color: #6d2e16;
@@ -162,28 +199,35 @@ a{
 }
 
 #f2{
-    background-image: url("images/fotoo.png");
-    height: 20cm;
+    height: 24cm;
     width: 100%;
-    background-size: 100% 100%;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
+
+#f2 img{
+    width: 100%;
+}
+
 
 .wr{
     align-items:center;
     justify-content:space-around;
-    height:10cm;
+    height:15cm;
     padding:10px;
     display:flex;
     flex-direction:initial;
     background-color: #f3f3ec;
 }
 #rec{
+    margin-top: 0px;
+    margin-bottom: 0px;
     text-align: center;
     align-items: center;
     background-color: #f3f3ec;
     padding-top: 50px;
     font-size: 20px;
-    color: #13765b;
+    color: #13765b; 
 }
 
 .divs{
@@ -357,9 +401,13 @@ a{
     width: 7.5cm;
 }
 
-
-
-
+#aboutUs{
+    background-image: url("../images/about.jpg");
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 22cm;
+}
 
 .aboutus{
     margin:0cm 7.5cm;
@@ -373,13 +421,9 @@ a{
 
 #tung {
     color: #7caf9c;
-}
-#aboutUs{
-    background-image: url("images/about.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 22.5cm;
-}
+} 
+
+
 
 
 
@@ -434,10 +478,10 @@ input {
   }
 
 
-.container{
-    max-width: 585px;
+/* .container{
+    max-width: 1150px;
     margin:auto;
-    margin-left: 200px;
+    margin-left: 400px;
 }
 .row{
     display: flex;
@@ -449,15 +493,15 @@ ul{
     align-items: flex-start;
 }
 .footer{
-    margin-top: 300px;
+    margin-top: 600px;
     background-color: #24262b;
-    padding: 35px 0;
-    height: 2.5cm;
+    padding: 70px 0;
+    height: 5cm;
     width: 100%;
 }
 .footer-col{
-   width: 25%;
-   padding: 0 7.5px;
+   width: 50%;
+   padding: 0 15px;
    justify-content: space-between;
 }
 
@@ -476,8 +520,8 @@ ul{
     font-size: 18px;
     color: #ffffff;
     text-transform: capitalize;
-    margin-bottom: 35px;
-    font-weight: 500;
+    margin-bottom: 70px;
+    font-weight: 1000;
     position: relative;
 }
 
@@ -526,7 +570,7 @@ ul{
 }
 .cnt{
     color:#bbbbbb;
-}
+} */
 /* footer{
     align-items:center;
     justify-content:space-between;

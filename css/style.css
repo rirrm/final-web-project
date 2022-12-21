@@ -1,6 +1,9 @@
-*{    
-    margin:0;
-    padding:0;
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
 }
  
 body{
@@ -26,23 +29,23 @@ a{
  
 #img1{
     width: 3.5cm;
-    height: 2.5cm;
-    padding-right: 11.2cm;
+    height: 1.25cm;
+    padding-right: 5.1cm;
 }
 #header1{
     align-items:center;
     justify-content:space-between;
-    height:4cm;
-    padding:20px;
-    font-size:35px;
+    height:2cm;
+    padding:10px;
+    font-size:17.5px;
     display:flex;
     flex-direction:initial;
     background-color: #f3f3ec;
 }
 #header1 ul li{
     color: #13765b;
-    margin-left: 65px;
-    padding: o 10px;
+    margin-left: 32.5px;
+    padding: 5px;
 }
 #header1 ul li:hover{
     text-decoration: underline;
@@ -53,9 +56,9 @@ a{
 
 #banner{
     background-color: #7caf9c;
-    height: 1cm;
+    height: 0.5cm;
     text-align: center;
-    padding: 30px;
+    padding: 15px;
     color: #f3f3ec;
 }
 
@@ -63,7 +66,7 @@ a{
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 37cm;
+    height: 18.5cm;
     background-color: #bacbc1;
     color: white;
 }
@@ -72,10 +75,10 @@ a{
     display: flex;
     flex-direction: column;
     width: 50%;
-    height: 37cm;
+    height: 18.5cm;
     align-items: center;
-    font-size: 50px;
-    padding-top: 15cm;
+    font-size: 25px;
+    padding-top: 7.5cm;
     color: #f3f3ec;
 }
 
@@ -83,7 +86,7 @@ a{
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    height: 37cm;
+    height: 18.5cm;
 }
 
 /* #foto{
@@ -95,13 +98,13 @@ a{
 } */
 
 #btn1{
-    margin:22px;
+    margin:11px;
     margin-left: auto;
-    width: 5cm;
-    height:50px;
+    width: 2.5cm;
+    height:25px;
     border:0px;
     background-color:#c6dad1;
-    border-radius: 100px;
+    border-radius: 50px;
     font-size:larger;
     color: #ebf0fc;
 }
@@ -109,9 +112,9 @@ a{
 .katrorat{
     align-items:center;
     justify-content:space-around;
-    height:35cm;
-    padding:20px;
-    font-size:20px;
+    height:17.5cm;
+    padding:10px;
+    font-size:10px;
     display:flex;
     flex-direction:initial;
     background-color:#bacbc1 ;
@@ -133,34 +136,34 @@ a{
 
 #ing{
     background-color: #144234;
-    height: 15cm;
-    width: 15cm;
-    padding:1cm;
-    border-radius: 3ch;
-    box-shadow: 12px 12px 2px 1px gray;
+    height: 7.5cm;
+    width: 7.5cm;
+    padding:0.5cm;
+    border-radius: 1.5ch;
+    box-shadow: 6px 6px 1px 0.5px gray;
 }
 
 #form{
     background-color: #6d2e16;
-    height: 15cm;
-    width: 15cm;
-    padding:1cm;
-    border-radius: 3ch;
-    box-shadow: 12px 12px 2px 1px gray;
+    height: 7.5cm;
+    width: 7.5cm;
+    padding:0.5cm;
+    border-radius: 1.5ch;
+    box-shadow: 6px 6px 1px 0.5px gray;
 }
 
 #exp{
     background-color: #939c8a;
-    height: 15cm;
-    width: 15cm;
-    padding:1cm;
-    border-radius: 3ch;
-    box-shadow: 12px 12px 2px 1px gray;
+    height: 7.5cm;
+    width: 7.5cm;
+    padding:0.5cm;
+    border-radius: 1.5ch;
+    box-shadow: 6px 6px 1px 0.5px gray;
 }
 
 #f2{
     background-image: url("images/fotoo.png");
-    height: 40cm;
+    height: 20cm;
     width: 100%;
     background-size: 100% 100%;
 }
@@ -168,8 +171,8 @@ a{
 .wr{
     align-items:center;
     justify-content:space-around;
-    height:20cm;
-    padding:20px;
+    height:10cm;
+    padding:10px;
     display:flex;
     flex-direction:initial;
     background-color: #f3f3ec;
@@ -178,40 +181,40 @@ a{
     text-align: center;
     align-items: center;
     background-color: #f3f3ec;
-    padding-top: 100px;
-    font-size: 40px;
+    padding-top: 50px;
+    font-size: 20px;
     color: #13765b;
 }
 
 .divs{
-    height: 20cm;
-    width: 15cm;
+    height: 10cm;
+    width: 7.5cm;
 }
 
 .tekstet{
     text-align: center;
-    font-size: 30px;
+    font-size: 15px;
 }
 
 #r1{
-    height: 15cm;
-    width: 15cm;
+    height: 7.5cm;
+    width: 7.5cm;
 }
 
 
 #r2{
-    height: 15cm;
-    width: 15cm;
+    height: 7.5cm;
+    width: 7.5cm;
 }
 
 #r3{
-    height: 15cm;
-    width: 15cm;
+    height: 7.5cm;
+    width: 7.5cm;
 }
 
 #r4{
-    height: 15cm;
-    width: 15cm;
+    height: 7.5cm;
+    width: 7.5cm;
 }
 
 
@@ -252,23 +255,23 @@ a{
 #all{
     display: flex;
     flex-direction: row;
-    margin-top: 80px;
-    height: 110cm;
+    margin-top: 40px;
+    height: 55cm;
     justify-content: center;
 }
 
 #kategorite ul{
     display: flex;
     flex-direction: column;
-    font-size: 30px;
-    width: 500px;
-    height: 100cm;
+    font-size: 15px;
+    width: 5px;
+    height: 50cm;
     align-items: flex-start;
 }
 
 
 #kategorite ul li{
-    padding-top: 1cm;
+    padding-top: 0.5cm;
 }
 
 #kat{
@@ -279,79 +282,79 @@ a{
 .rreshti{
     justify-content: space-around;
     align-items: center;
-    height: 20cm;
-    font-size: 13px;
+    height: 10cm;
+    font-size: 6.5px;
     display: flex;
     flex-direction: row;
 }
 
 .p{
-    height: 18cm;
-    width: 15cm;
-    margin: 1cm;
-    font-size: 30px;
+    height: 9cm;
+    width: 7.5cm;
+    margin: 0.5cm;
+    font-size: 15px;
     text-align: center;
 }
 
 #k1{
-    height: 15cm;
-    width: 15cm;
+    height: 7.5cm;
+    width: 7.5cm;
 }
 #k2{
-    height: 15cm;
-    width: 15cm;
+    height: 7.5cm;
+    width: 7.5cm;
 }
 #k3{
-    height: 15cm;
-    width: 15cm;
+    height: 7.5cm;
+    width: 7.5cm;
 }
 #k4{
-    height: 15cm;
-    width: 15cm;
+    height: 7.5cm;
+    width: 7.5cm;
 }
 #k5{
-    height: 15cm;
-    width: 15cm;
+    height: 7.5cm;
+    width: 7.5cm;
 }
 #k6{
-    height: 15cm;
-    width: 15cm;
+    height: 7.5cm;
+    width: 7.5cm;
 }
 #k7{
-    height: 15cm;
-    width: 15cm;
+    height: 7.5cm;
+    width: 7.5cm;
 }
 #k8{
-    height: 15cm;
-    width: 15cm;
+    height: 7.5cm;
+    width: 7.5cm;
 }
 #k9{
-    height: 15cm;
-    width: 15cm;
+    height:7.5cm;
+    width: 7.5cm;
 }
 #k10{
-    height: 15cm;
-    width: 15cm;
+    height: 7.5cm;
+    width: 7.5cm;
 }
 #k11{
-    height: 15cm;
-    width: 15cm;
+    height: 7.5cm;
+    width: 7.5cm;
 }
 #k12{
-    height: 15cm;
-    width: 15cm;
+    height: 7.5cm;
+    width: 7.5cm;
 }
 #k13{
-    height: 15cm;
-    width: 15cm;
+    height: 7.5cm;
+    width: 7.5cm;
 }
 #k14{
-    height: 15cm;
-    width: 15cm;
+    height: 7.5cm;
+    width: 7.5cm;
 }
 #k15{
-    height: 15cm;
-    width: 15cm;
+    height: 7.5cm;
+    width: 7.5cm;
 }
 
 
@@ -359,12 +362,12 @@ a{
 
 
 .aboutus{
-    margin:0cm 15cm;
-    font-size: 40px;
+    margin:0cm 7.5cm;
+    font-size: 20px;
 }
 
 #persh{
-    padding-top: 20cm;
+    padding-top: 10cm;
     color: #7caf9c;
 }
 
@@ -375,7 +378,7 @@ a{
     background-image: url("images/about.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    height: 45cm;
+    height: 22.5cm;
 }
 
 
@@ -383,58 +386,58 @@ a{
 
 .box{
     margin:auto;
-    padding-left: 500px;
-    margin-top: 100px;
+    padding-left: 250px;
+    margin-top: 50px;
     background-color: azure;
-    height: 30cm;
-    width: 30cm;
+    height: 15.5cm;
+    width: 15.5cm;
 }
  #label{
-    padding: 30px;
-    padding-left: 115px;
-    font-size: 45px;
+    padding: 15.5px;
+    padding-left: 57.5px;
+    font-size: 22.5px;
 }
  .full-input {
-    margin-top: 22px;
-    height:50px;
-    width:15cm;
+    margin-top: 11px;
+    height:25px;
+    width:7.5cm;
     border: 0px;
     background-color: #ebf0fc;
-    border-radius: 100px;
+    border-radius: 50px;
     color:#7f7f7f
   }
 input {
     margin-left:17px;
     outline: none;
     border: none;
-    line-height: 1em;
-    width: 8cm;
-    font-size: 12pt;
+    line-height: 0.5em;
+    width: 4cm;
+    font-size: 6pt;
     background-color: #ebf0fc ;
   }
   .form-wrapper label {
     display: block;
-    font-size: 17px;
-    margin-left: 17px;
+    font-size: 8.5px;
+    margin-left: 8.5px;
     color: #767f87;
   }
   #btn2{
-    margin:22px;
+    margin:11px;
     margin-left: auto;
-    width: 15cm;
-    height:50px;
+    width: 7.5cm;
+    height:25px;
     border:0px;
     background-color:#f9c3f2;
-    border-radius: 100px;
+    border-radius: 50px;
     font-size:larger;
     color: #ebf0fc;
   }
 
 
 .container{
-    max-width: 1170px;
+    max-width: 585px;
     margin:auto;
-    margin-left: 400px;
+    margin-left: 200px;
 }
 .row{
     display: flex;
@@ -446,15 +449,15 @@ ul{
     align-items: flex-start;
 }
 .footer{
-    margin-top: 600px;
+    margin-top: 300px;
     background-color: #24262b;
-    padding: 70px 0;
-    height: 5cm;
+    padding: 35px 0;
+    height: 2.5cm;
     width: 100%;
 }
 .footer-col{
    width: 25%;
-   padding: 0 15px;
+   padding: 0 7.5px;
    justify-content: space-between;
 }
 

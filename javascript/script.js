@@ -13,15 +13,13 @@ function validoInput(){
 }
 
 var i = 0;
-// var imgArray = [
-// "./images/slider1.jpg",
-// "./images/slider2.jpg",
-// "./images/slider3.jpg"
-// ];
+ var imgArray = [
+ "./images/slider5.jpg",
+ "./images/slider8.jpg",
+"./images/slider9.jpg"
+ ];
 
-var imgArray = [
-    
-]
+
 
 function ndrroImg() {
     document.getElementById('slideshow').src = imgArray[i];
@@ -33,3 +31,4 @@ if (i < imgArray.length - 1 ) {
 setTimeout("ndrroImg()", 1500)
 }
 document.body.addEventListener('load', ndrroImg());
+

@@ -1,0 +1,110 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+ 
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
+    color:black;
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+}
+ 
+a{
+    color: #262626;
+    text-decoration: none;
+}
+
+ 
+#header1 ul{
+    list-style:none;
+    display:flex;
+    align-items: center;
+}
+ 
+#img1{
+    width: 3.5cm;
+    height: 1.25cm;
+    padding-right: 5.1cm;
+}
+#header1{
+    align-items:center;
+    justify-content:space-between;
+    height:1.7cm;
+    width:100%;
+    /* padding:10px; */
+    /* e heka qet padding */
+    font-size:17.5px;
+    display:flex;
+    flex-direction:initial;
+    background-color: #f3f3ec;
+    position:absolute;
+}
+#header1 ul li{
+    color: #13765b;
+    margin-left:32.5px;
+    padding: 5px;
+}
+
+#header1 ul li:hover{
+    text-decoration: underline;
+}
+#header1 a{
+    color: #13765b;
+}
+#head2 ul li{
+    margin-right: 50px;
+}
+.box{
+    margin:auto;
+    padding-left: 250px;
+    margin-top: 50px;
+    background-color: azure;
+    height: 15.5cm;
+    width: 15.5cm;
+}
+ #label{
+    padding: 15.5px;
+    padding-left: 57.5px;
+    font-size: 22.5px;
+}
+ .full-input {
+    margin-top: 11px;
+    height:25px;
+    width:7.5cm;
+    border: 0px;
+    background-color: #ebf0fc;
+    border-radius: 50px;
+    color:#7f7f7f
+  }
+input {
+    margin-left:17px;
+    outline: none;
+    border: none;
+    line-height: 0.5em;
+    width: 4cm;
+    font-size: 6pt;
+    background-color: #ebf0fc ;
+  }
+  .form-wrapper label {
+    display: block;
+    font-size: 8.5px;
+    margin-left: 8.5px;
+    color: #767f87;
+  }
+  #btn2{
+    margin:11px;
+    margin-left: auto;
+    width: 7.5cm;
+    height:25px;
+    border:0px;
+    background-color:#f9c3f2;
+    border-radius: 50px;
+    font-size:larger;
+    color: #ebf0fc;
+  }

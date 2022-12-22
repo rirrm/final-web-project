@@ -32,3 +32,5 @@ setTimeout("ndrroImg()", 4000)
 }
 document.body.addEventListener('load', ndrroImg());
 
+
+

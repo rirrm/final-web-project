@@ -92,13 +92,14 @@ h3{
     height: 17cm;
     align-items: flex-start;
     margin-left: 40px;
-    font-size: 20px;
+    font-size: 21px;
     padding-top: 6cm;
     color: #f3f3ec;
 }
 #teksti p{
     font-size:37px;
 }
+
 
 #foto{
     display: flex;
@@ -262,11 +263,11 @@ h3{
 .divs{
     height: 10cm;
     width: 7.5cm;
+    transition: transform .2s;
 }
 
 .divs:hover{
     transform: scale(1.2);
-    transition: transform .2s;
     cursor:pointer;
     /* box-shadow:10px 10px 10px #262626; */
 }
@@ -335,27 +336,36 @@ h3{
 #all{
     display: flex;
     flex-direction: row;
-    margin-top: 40px;
+    margin-top: 2cm;
+    padding-top:50px;
     height: 55cm;
-    justify-content: center;
+    width:90%;
+    border-radius: 60px;
+    justify-content: space-around;
+    margin-left: 80px;
 }
+
 
 #kategorite ul{
     display: flex;
     flex-direction: column;
     font-size: 15px;
-    width: 5px;
+    width: 10px;
     height: 50cm;
     align-items: flex-start;
+    list-style: none;
 }
 
 
 #kategorite ul li{
     padding-top: 0.5cm;
-}
 
-#kat{
-    color: #767f87;
+}
+.divv{
+    width:200px;
+}
+.divv :hover{
+    color:gray;
 }
 
 

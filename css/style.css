@@ -13,6 +13,7 @@ body{
     font-size: 15px;
     line-height: 1.5;
     width: 100%;
+    background-color: #bacbc1;
 }
  
 a{
@@ -37,8 +38,6 @@ a{
     justify-content:space-between;
     height:1.7cm;
     width:100%;
-    /* padding:10px; */
-    /* e heka qet padding */
     font-size:17.5px;
     display:flex;
     flex-direction:initial;
@@ -51,15 +50,43 @@ a{
     padding: 5px;
 }
 
-#header1 ul li:hover{
-    text-decoration: underline;
-}
 #header1 a{
     color: #13765b;
 }
 #head2 ul li{
     margin-right: 50px;
 }
+
+.nav ul li a:hover{
+    color: rgba(19, 117, 58, 0.911);
+    transition: .5s;
+}
+
+.hovernav {
+    display: inline-block;
+    position: relative;
+    color: rgba(19, 117, 58, 0.911);
+}
+
+.hovernav:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(19, 117, 58, 0.911);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+.hovernav:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
 
 #banner{
     background-image: linear-gradient(#0b5d47,#13765b );
@@ -222,164 +249,89 @@ h3{
 }
 
 
-/* footer{
-    align-items:center;
-    justify-content:space-between;
-    background-color: #bacbc1;
-    font-size: 35px;
-    display: flex;
-    flex-direction: row;
-    margin-top: 80px;
-    height: 10cm;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 
-#paragrafi{
-    width: 30cm;
-    height: 8cm;
-    margin-top: 2cm;
-    margin-left: 5cm;
-    display: flex;
-    flex-direction: column;
-}
-
-#kontaktet{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-#kontaktet ul{
-    width: 30cm;
-    height: 8cm;
-    margin-top: 2cm;
-    display: flex;
-    flex-direction: column;    
-} */
-
-
-/* .container{
-    max-width: 1150px;
-    margin:auto;
-    margin-left: 400px;
+.container{
+	max-width: 100%;
+	margin:auto;
+    margin-left: 230px;
 }
 .row{
-    display: flex;
-    flex-wrap: wrap; 
-
+	display: flex;
+	flex-wrap: wrap;
 }
-ul{
-    list-style: none;
-    align-items: flex-start;
+.footer-col ul{
+	list-style: none;
+    margin: 0px;
+    padding: 0px;
+    color: #f3f3ec;
 }
 .footer{
-    margin-top: 600px;
-    background-color: #24262b;
+	background-color: #13765b;
     padding: 70px 0;
     height: 5cm;
-    width: 100%;
 }
 .footer-col{
-   width: 50%;
+   width: 25%;
    padding: 0 15px;
-   justify-content: space-between;
 }
 
-#comp{
-    align-items: left;
+#contact{
+    margin-right: 70px;
 }
 
-#c{
-    align-items: center;
-}
-
-#f{
-    align-items: right;
+#socials{
+    margin-left: 70px;
 }
 .footer-col h4{
-    font-size: 18px;
-    color: #ffffff;
-    text-transform: capitalize;
-    margin-bottom: 70px;
-    font-weight: 1000;
-    position: relative;
+	font-size: 18px;
+	color: #f3f3ec;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
 }
-
 .footer-col h4::before{
-    content: '';
-    position: absolute;
-    left:0;
-    bottom: -10px;
-    background-color: lightskyblue;
-    height: 2px;
-    box-sizing: border-box;
-    width: 50px;
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #0b5d47;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
 }
 .footer-col ul li:not(:last-child){
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 .footer-col ul li a{
-    font-size: 16px;
-    text-transform: capitalize;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 300;
-    color: #bbbbbb;
-    display: block;
-    transition: all 0.3s ease;
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #f3f3ec;
+	text-decoration: none;
+	font-weight: 300;
+	color: #f3f3ec;
+	display: block;
+	transition: all 0.3s ease;
 }
 .footer-col ul li a:hover{
-    color: #ffffff;
-    padding-left: 8px;
+	color: #f3f3ec;
+	padding-left: 8px;
 }
 .footer-col .social-links a{
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    background-color: rgba(255,255,255,0.2);
-    margin:0 10px 10px 0;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50%;
-    color: #ffffff;
-    transition: all 0.5s ease;
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #f3f3ec;
+	transition: all 0.5s ease;
 }
 .footer-col .social-links a:hover{
-    color: #24262b;
-    background-color: #ffffff;
+	color: #f3f3ec;
+	background-color: #f3f3ec;
 }
-.cnt{
-    color:#bbbbbb;
-} */
-/* footer{
-    align-items:center;
-    justify-content:space-between;
-    background-color: #bacbc1;
-    font-size: 35px;
-    display: flex;
-    flex-direction: row;
-    margin-top: 80px;
-    height: 10cm;
-}
-
-
-#paragrafi{
-    width: 30cm;
-    height: 8cm;
-    margin-top: 2cm;
-    margin-left: 5cm;
-    display: flex;
-    flex-direction: column;
-}
-
-#kontaktet{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-#kontaktet ul{
-    width: 30cm;
-    height: 8cm;
-    margin-top: 2cm;
-    display: flex;
-    flex-direction: column;    
-} */

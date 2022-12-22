@@ -13,6 +13,7 @@ body{
     font-size: 15px;
     line-height: 1.5;
     width: 100%;
+    background-color: #bacbc1;
 }
  
 a{
@@ -37,8 +38,6 @@ a{
     justify-content:space-between;
     height:1.7cm;
     width:100%;
-    /* padding:10px; */
-    /* e heka qet padding */
     font-size:17.5px;
     display:flex;
     flex-direction:initial;
@@ -51,15 +50,43 @@ a{
     padding: 5px;
 }
 
-#header1 ul li:hover{
-    text-decoration: underline;
-}
 #header1 a{
     color: #13765b;
 }
 #head2 ul li{
     margin-right: 50px;
 }
+
+.nav ul li a:hover{
+    color: rgba(19, 117, 58, 0.911);
+    transition: .5s;
+}
+
+.hovernav {
+    display: inline-block;
+    position: relative;
+    color: rgba(19, 117, 58, 0.911);
+}
+
+.hovernav:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(19, 117, 58, 0.911);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+.hovernav:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
 .box{
     margin:auto;
     padding-left: 250px;

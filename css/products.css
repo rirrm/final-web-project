@@ -90,7 +90,7 @@ a{
     display: flex;
     flex-direction: row;
     padding-top:100px;
-    height: 80cm;
+    height: 95cm;
     width:90%;
     border-radius: 60px;
     justify-content: space-between;
@@ -118,13 +118,13 @@ a{
 
 
 .rreshti{
-    justify-content: space-around;
     align-items: center;
     height: 10cm;
     font-size: 6.5px;
     display: flex;
     flex-direction: row;
     margin-top: 1cm;
+    margin-bottom: 3cm;
 }
 
 .p{
@@ -139,6 +139,46 @@ a{
     height: 7.5cm;
     width: 7.5cm;
 }
+
+.blej{
+        margin:10px;
+        margin-left: auto;
+        width: 7.5cm;
+        height:40px;
+        border:0px;
+        background-color:white;
+        border: 3px solid #7caf9c;
+        font-size:larger;
+        transition: all 0.5s;
+        cursor: pointer;
+        color: #7caf9c;
+}
+.blej:hover{
+    background-color: #7caf9c;
+    color:white;
+}
+.pershkrimi{
+    height:70px;
+    width:7.5cm;
+}
+
+/* .blej1{
+    margin:32px;
+    margin-left: auto;
+    width: 7.5cm;
+    height:40px;
+    border:0px;
+    background-color:white;
+    border: 3px solid #7caf9c;
+    font-size:larger;
+    transition: all 0.5s;
+    cursor: pointer;
+    color: #7caf9c;
+}
+.blej1:hover{
+background-color: #7caf9c;
+color:white;
+} */
 
 
 

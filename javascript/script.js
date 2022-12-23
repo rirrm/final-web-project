@@ -14,7 +14,7 @@ function validoInput(){
 
 var i = 0;
  var imgArray = [
- "./images/test1.jpg",
+ "./images/sliderr.jpg",
  "./images/test2.jpg",
 "./images/test3.jpg"
  ];

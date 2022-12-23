@@ -9,7 +9,7 @@ html, body{
 body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #fff;
-    color:black;
+    /* color:black; */
     font-size: 15px;
     line-height: 1.5;
     width: 100%;
@@ -89,13 +89,12 @@ a{
 #all{
     display: flex;
     flex-direction: row;
-    margin-top: 1cm;
-    padding-top:50px;
+    padding-top:100px;
     height: 80cm;
     width:90%;
     border-radius: 60px;
-    justify-content: space-around;
-    margin-left: 80px;
+    justify-content: space-between;
+    
 }
 
 
@@ -103,22 +102,18 @@ a{
     display: flex;
     flex-direction: column;
     font-size: 15px;
-    width: 170px;
-    height: 50cm;
+    width: 150px;
+    height: 200px;
     align-items: flex-start;
     list-style: none;
+    margin-left: 20px;
+    
 }
-
 
 #kategorite ul li{
     padding-top: 0.5cm;
+    width:150px;
 
-}
-.divv{
-    width:200px;
-}
-.divv :hover{
-    color:gray;
 }
 
 
@@ -129,6 +124,7 @@ a{
     font-size: 6.5px;
     display: flex;
     flex-direction: row;
+    margin-top: 1cm;
 }
 
 .p{
@@ -139,66 +135,11 @@ a{
     text-align: center;
 }
 
-#k1{
+.k{
     height: 7.5cm;
     width: 7.5cm;
 }
-#k2{
-    height: 7.5cm;
-    width: 7.5cm;
-}
-#k3{
-    height: 7.5cm;
-    width: 7.5cm;
-}
-#k4{
-    height: 7.5cm;
-    width: 7.5cm;
-}
-#k5{
-    height: 7.5cm;
-    width: 7.5cm;
-}
-#k6{
-    height: 7.5cm;
-    width: 7.5cm;
-}
-#k7{
-    height: 7.5cm;
-    width: 7.5cm;
-}
-#k8{
-    height: 7.5cm;
-    width: 7.5cm;
-}
-#k9{
-    height:7.5cm;
-    width: 7.5cm;
-}
-#k10{
-    height: 7.5cm;
-    width: 7.5cm;
-}
-#k11{
-    height: 7.5cm;
-    width: 7.5cm;
-}
-#k12{
-    height: 7.5cm;
-    width: 7.5cm;
-}
-#k13{
-    height: 7.5cm;
-    width: 7.5cm;
-}
-#k14{
-    height: 7.5cm;
-    width: 7.5cm;
-}
-#k15{
-    height: 7.5cm;
-    width: 7.5cm;
-}
+
 
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');

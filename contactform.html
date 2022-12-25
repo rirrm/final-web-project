@@ -34,27 +34,24 @@
     <div class="kufiza">
         
         <div class="center">
-            <h1>Login</h1>
-            <form class="login_form" action="./login.html" method="post" name="form" onsubmit="return validated()">
+            <h1>Kontakti</h1>
+            <form class="contact_form" action="./contactform.html" method="post" name="form" onsubmit="return validated()">
               <div class="txt_field">
-                <input autocomplete="off" type="text" name="username" id="user" required>
+                <input autocomplete="off" type="text" name="emri" id="emri" required>
                 <span></span>
-                <label for="username">Username</label>
+                <label for="emri">Emri</label>
               </div>
               <div class="txt_field">
-                <input type="password" name="password" id="pass" required>
+                <input autocomplete="off" type="text" name="mbiemri" id="mbiemri" required>
                 <span></span>
-                <label for="password" >Password</label>
+                <label for="mbiemri">Mbiemri</label>
               </div>
-              <input type="submit" name="login-btn" value="SIGN IN">
-              <div class="signup_link">
-                Don't have an account? <a href="signup.html">Sign up!</a>
+                    
+              <textarea id="subject" name="subject" placeholder="Shkruani mesazhin.." rows="10" cols="70"></textarea>
+              <input type="submit" name="login-btn" value="SEND">
               </div>
             </form>
           </div>
-          <div>
-            <img src="./images/haileybw.jpg" alt="" class="lsimg">
-        </div>
           </div>
     </main>
     <footer class="footer">
@@ -92,5 +89,6 @@
             </div>
         </div>
    </footer>
+   <!-- <script src="/javascript/contactform.js"></script> -->
 </body>
 </html>

@@ -1,6 +1,6 @@
 var i = 0;
  var imgArray = [
- "./images/sliderr.jpg",
+ "./images/sliderrFINAL.jpg",
  "./images/shea2.jpg",
 "./images/squalene2.jpg"
  ];

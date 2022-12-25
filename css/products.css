@@ -159,14 +159,14 @@ a{
         height:40px;
         border:0px;
         background-color:white;
-        border: 3px solid #7caf9c;
+        border: 3px solid #13765b;
         font-size:larger;
         transition: all 0.5s;
         cursor: pointer;
-        color: #7caf9c;
+        color:#13765b;
 }
 .blej:hover{
-    background-color: #7caf9c;
+    background-color:#13765b;
     color:white;
 }
 .pershkrimi{

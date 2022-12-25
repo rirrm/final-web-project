@@ -29,8 +29,13 @@
 </header>
     <body>
         <div class="center">
-            <h1>Login</h1>
+            <h1>Sign up</h1>
             <form method="post" onsubmit="return validate()">
+                <div class="txt_field">
+                    <input type="text" name="emailaddress" id="email" required>
+                    <span></span>
+                    <label for="emailaddress">Email</label>
+                  </div>
               <div class="txt_field">
                 <input type="text" name="username" id="user" required>
                 <span></span>
@@ -41,9 +46,9 @@
                 <span></span>
                 <label for="password" >Password</label>
               </div>
-              <input type="submit" name="login-btn" value="Login">
+              <input type="submit" name="login-btn" value="Sign up">
               <div class="signup_link">
-                Not a member? <a href="signup.html">Signup</a>
+                Already have an account? <a href="login.html">Login</a>
               </div>
             </form>
           </div>

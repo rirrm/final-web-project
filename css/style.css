@@ -87,13 +87,10 @@ a{
 }
 
 
-
 #banner{
     background-image: linear-gradient(#0b5d47,#13765b );
-    /* background-color: #13765b; */
     height: 1cm;
     text-align: center;
-    /* padding-bottom: 10px; */
     margin-top: 1.7cm;
     color: #f3f3ec;
     padding-top:5px;
@@ -183,7 +180,7 @@ h3{
     margin:50px 15%;
   }
   
-  .katrorat{
+.katrorat{
     height:500px;
     width:100%;
     background-color: #bacbc1;
@@ -194,7 +191,7 @@ h3{
 .wr{
     align-items:center;
     justify-content:space-around;
-    height:15cm;
+    height:13cm;
     padding:10px;
     display:flex;
     flex-direction:initial;
@@ -219,7 +216,6 @@ h3{
 .divs:hover{
     transform: scale(1.2);
     cursor:pointer;
-    /* box-shadow:10px 10px 10px #262626; */
 }
 
 .tekstet{
@@ -227,28 +223,12 @@ h3{
     font-size: 15px;
 }
 
-#r1{
+.r{
     height: 7.5cm;
     width: 7.5cm;
 }
 
-
-#r2{
-    height: 7.5cm;
-    width: 7.5cm;
-}
-
-#r3{
-    height: 7.5cm;
-    width: 7.5cm;
-}
-
-#r4{
-    height: 7.5cm;
-    width: 7.5cm;
-}
-
-#aboutUs2{
+#fotoFundit{
     display: flex;
     flex-direction: row;
     width: 90%;
@@ -261,7 +241,7 @@ h3{
     margin-bottom: 100px;
 }
 
-#aboutUs2Txt{
+#fotoFunditTxt{
     width: 60%;
     margin: 30px 20px;
     padding: 25px;

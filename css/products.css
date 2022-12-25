@@ -9,7 +9,6 @@ html, body{
 body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #fff;
-    /* color:black; */
     font-size: 15px;
     line-height: 1.5;
     width: 100%;
@@ -97,7 +96,6 @@ a{
     
 }
 
-
 #kategorite ul{
     display: flex;
     flex-direction: column;
@@ -116,6 +114,21 @@ a{
 
 }
 
+.divv{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #f3f3ec;
+	text-decoration: none;
+	font-weight: 300;
+	color: #f3f3ec;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.divv:hover{
+	color: #f3f3ec;
+	padding-left: 8px;
+}
 
 .rreshti{
     align-items: center;
@@ -162,24 +175,10 @@ a{
     width:7.5cm;
 }
 
-/* .blej1{
-    margin:32px;
-    margin-left: auto;
-    width: 7.5cm;
-    height:40px;
-    border:0px;
-    background-color:white;
-    border: 3px solid #7caf9c;
-    font-size:larger;
-    transition: all 0.5s;
-    cursor: pointer;
-    color: #7caf9c;
+.zbritja{
+    text-decoration: line-through;
+    color: gray;
 }
-.blej1:hover{
-background-color: #7caf9c;
-color:white;
-} */
-
 
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');

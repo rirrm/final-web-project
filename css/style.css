@@ -118,7 +118,7 @@ h3{
     margin-left: 40px;
     font-size: 21px;
     padding-top: 6cm;
-    color: #7caf9c;
+    color:#13765b;
 }
 #teksti p{
     font-size:37px;
@@ -140,11 +140,11 @@ h3{
     height:50px;
     border:0px;
     background-color:#e7e6e2;
-    border: 3px solid #7caf9c;
+    border: 3px solid #13765b;
     font-size:larger;
     transition: all 0.5s;
     cursor: pointer;
-    color: #7caf9c;
+    color:#13765b;
 }
 
 #btn1 span {
@@ -205,7 +205,7 @@ h3{
     background-color: #f3f3ec;
     padding-top: 50px;
     font-size: 20px;
-    color:#7caf9c; 
+    color:#13765b; 
 }
 .divs{
     height: 10cm;

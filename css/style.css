@@ -31,7 +31,7 @@ a{
 #img1{
     width: 3.5cm;
     height: 1.25cm;
-    padding-right: 5.1cm;
+    padding-right: 8.0cm;
 }
 #header1{
     align-items:center;
@@ -150,13 +150,11 @@ h3{
 #btn1 span {
     cursor: pointer;
     display: inline-block;
-    position: relative;
     transition: 0.5s;
   }
   
 #btn1 span:after {
     content: '\00bb';
-    position: absolute;
     opacity: 0;
     top: 0;
     right: -20px;
@@ -228,6 +226,42 @@ h3{
     width: 7.5cm;
 }
 
+#btn2{
+    margin:0px;
+    margin-left: auto;
+    width: 10cm;
+    height:50px;
+    border:0px;
+    background-color:#e7e6e2;
+    border: 3px solid #13765b;
+    font-size:larger;
+    transition: all 0.5s;
+    cursor: pointer;
+    color:#13765b;
+}
+
+#btn2 span {
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.5s;
+  }
+  
+#btn2 span:after {
+    content: '\00bb';
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+#btn2:hover span {
+    padding-right: 25px;
+  }
+  
+#btn2:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
 #fotoFundit{
     display: flex;
     flex-direction: row;

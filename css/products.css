@@ -5,7 +5,6 @@ html, body{
     padding: 0px;
     overflow-x: hidden;
 }
- 
 
 body{
     font-family: Arial, Helvetica, sans-serif;
@@ -31,7 +30,7 @@ a{
 #img1{
     width: 3.5cm;
     height: 1.25cm;
-    padding-right: 5.1cm;
+    padding-right: 8.0cm;
 }
 #header1{
     align-items:center;
@@ -88,45 +87,12 @@ a{
 
 #all{
     display: flex;
-    flex-direction: row;
-    padding-top:100px;
-    height: 95cm;
-    width:90%;
-    border-radius: 60px;
-    justify-content: space-between;
-    
-}
-
-#kategorite ul{
-    display: flex;
     flex-direction: column;
-    font-size: 15px;
-    width: 150px;
-    height: 200px;
-    align-items: flex-start;
-    list-style: none;
-    margin-left: 20px;
-}
-
-#kategorite ul li{
-    padding-top: 0.5cm;
-    width:150px;
-}
-
-.divv{
-	font-size: 16px;
-	text-transform: capitalize;
-	color: #f3f3ec;
-	text-decoration: none;
-	font-weight: 300;
-	color: black;
-	display: block;
-	transition: all 0.3s ease;
-}
-
-.divv:hover{
-	color: #f3f3ec;
-	padding-left: 8px;
+    padding-top:100px;
+    height: 102cm;
+    width:100%;
+    margin-left: 110px;
+    
 }
 
 .rreshti{

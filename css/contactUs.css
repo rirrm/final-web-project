@@ -86,54 +86,118 @@ a{
     transform-origin: bottom left;
 }
 
-#aboutUs{
-    background-color: #e9e8e4;
-    width: 83%;
-    margin-left: 5%;
-    height: 500px;
-    margin-top: 100px;
-    text-align: center;
-    border-radius: 10px;
-    padding: 50px 50px;
-}
-
-#aboutUsTxt{
-    margin: 20px 200px;
-    padding: 5px;
-    font-size: 25px;
-}
-
-#aboutUs2{
-    display: flex;
-    flex-direction: row;
-    width: 90%;
-    margin-left: 5%;
-    height: 620px;
-    margin-top: 5%;
-    text-align: center;
-    border-radius: 10px;
-    background-color: #e9e8e4;
-    margin-bottom: 100px;
-}
-
-#aboutUs2Txt{
-    width: 60%;
-    margin: 30px 20px;
-    padding: 25px;
-    font-size: 20px;
-    text-align: center;
-}
-
-#img{
+.lsimg{
     width: 100%;
-    height: 620px;
+    height: 600px;
     margin-right: 200px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    }
     
-}
-
-/* footeri */
+    .kufiza{
+      display: flex;
+      flex-direction: row;
+      width: 90%;
+      margin-left: 5%;
+      height: 600px;
+      margin-top: 100px;
+      text-align: center;
+      border-radius: 10px;
+      background-color: #e9e8e4;
+      margin-bottom: 100px;
+    }
+    
+    
+    .center{
+    width: 500px;
+    background:#e9e8e4;
+    border-radius: 10px;
+    margin-left: 100px;
+    margin-top: 80px;
+    }
+    .center h1{
+    text-align: center;
+    color:#13765b;
+    padding: 20px 0;
+    border-bottom: 1px solid silver;
+    }
+    .center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+    }
+    form .txt_field{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+    }
+    .txt_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    }
+    .txt_field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+    }
+    .txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background:#13765b;
+    transition: .5s;
+    }
+    .txt_field input:focus ~ label,
+    .txt_field input:valid ~ label{
+    top: -5px;
+    color: #13765b;
+    }
+    .txt_field input:focus ~ span::before,
+    .txt_field input:valid ~ span::before{
+    width: 100%;
+    }
+    input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background:#e9e8e4;
+    font-size: 18px;
+    border:3px solid #13765b;
+    color: #13765b;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.5s;
+    }
+    input[type="submit"]:hover{
+    background-color:#13765b;
+    color:white;
+    }
+    .signup_link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+    }
+    .signup_link a{
+    color: #13765b;
+    text-decoration: none;
+    }
+    .signup_link a:hover{
+    text-decoration: underline;
+    }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 

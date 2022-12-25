@@ -7,7 +7,7 @@ html, body{
 }
 
 body{
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background: #fff;
   color:black;
   font-size: 15px;
@@ -31,7 +31,7 @@ a{
 #img1{
   width: 3.5cm;
   height: 1.25cm;
-  padding-right: 5.1cm;
+  padding-right: 8.0cm;
 }
 #header1{
   align-items:center;
@@ -58,14 +58,14 @@ a{
 }
 
 .nav ul li a:hover{
-  color:#13765b;
+  color: rgba(19, 117, 58, 0.911);
   transition: .5s;
 }
 
 .hovernav {
   display: inline-block;
   position: relative;
-  color:#13765b;
+  color: rgba(19, 117, 58, 0.911);
 }
 
 .hovernav:after {
@@ -76,7 +76,7 @@ a{
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color:#13765b;
+  background-color: rgba(19, 117, 58, 0.911);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }

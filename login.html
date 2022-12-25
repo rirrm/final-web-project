@@ -34,20 +34,22 @@
       </div>
         <div class="center">
             <h1>Login</h1>
-            <form method="post" onsubmit="return validate()">
+            <form class="login_form" action="./login.html" method="post" name="form" onsubmit="return validated()">
               <div class="txt_field">
-                <input type="text" name="username" id="user" required>
+                <input autocomplete="off" type="text" name="username" id="user" required>
                 <span></span>
                 <label for="username">Username</label>
               </div>
+              <div id="name1_error">Fill out your username correctly</div>
               <div class="txt_field">
                 <input type="password" name="password" id="pass" required>
                 <span></span>
                 <label for="password" >Password</label>
               </div>
-              <input type="submit" name="login-btn" value="SIGN IN">
+              <div id="password_error">Fill out your password correctly</div>
+              <input type="submit" name="login-btn" value="Login">
               <div class="signup_link">
-                Don't have an account? <a href="signup.html">Sign up!</a>
+                Don't have an account? <a href="signup.html">Signup</a>
               </div>
             </form>
           </div>
@@ -88,6 +90,6 @@
                 </div>
             </div>
        </footer>
-    <script src="javascript/script.js"></script>
+    <script src="javascript/validation.js"></script>
 </body>
 </html>

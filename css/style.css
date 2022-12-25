@@ -5,9 +5,9 @@ html, body{
     padding: 0px;
     overflow-x: hidden;
 }
- 
+
 body{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background: #fff;
     color:black;
     font-size: 15px;

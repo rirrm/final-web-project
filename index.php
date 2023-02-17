@@ -9,26 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div id="header1">
-        <div id="head1">
-            <ul>
-                <li><a href="index.html" class="hovernav">Home</a></li>
-                <li><a href="products.html" class="hovernav">Produktet</a></li>
-                <li><a href="aboutUs.html" class="hovernav">Rreth nesh</a></li>
-                <li><a href="contactform.html" class="hovernav">Kontakti</a></li>
-            </ul>
-        </div>
-        <div>
-                <a href="index.html"><img src="images/logo.png" id="img1"></a>
-        </div>
-        <div id="head2">
-            <ul>
-                <li><a href="login.html" class="hovernav">Kyçu</a></li>
-            </ul>
-        </div>
-        </div>
-    </header>
+<?php 
+    include "header.php";
+    
+?>
     <main>
         <div id="banner">
             <h3>Gjithmonë produkte të pastra dhe vegane </h3>
@@ -90,41 +74,9 @@
             </div>
         </div>
     </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col">
-                    <h4>Navigo</h4>
-                    <ul>
-                        <li><a href="index.html">Faqja Kryesore</a></li>
-                        <li><a href="products.html">Produktet</a></li>
-                        <li><a href="aboutUs.html">Rreth nesh</a></li>
-                        <li><a href="login.html">Kyçu</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col" id="contact">
-                    <h4>Na kontaktoni</h4>
-                    <ul>
-                        <li>Biznesi + Partneritetet: brand@haneul.com</li>
-                        <li>Press: press@haneul.com</li>
-                        <li>Numri Kontaktues: +38349900900</li>
-                        <li>HQ Address:Lagjja Kalabria, 10000 Prishtinë, Kosovë</li>
-                    </ul>
-                </div>
-
-                <div class="footer-col" id="socials">
-                    <h4>Na ndiqni</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-   </footer>
+   <?php 
+    include "footer.php";  
+?>
 <script src="javascript/script.js"></script>
 </body>
 </html>

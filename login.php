@@ -31,7 +31,7 @@ include "header.php";
               </div>
               <input type="submit" name="login-btn" value="SIGN IN">
               <div class="signup_link">
-                Don't have an account? <a href="signup.html">Sign up!</a>
+                Don't have an account? <a href="signup.php">Sign up!</a>
               </div>
             </form>
           </div>

@@ -12,31 +12,28 @@
 
 <?php 
 include "header.php";  
+include "arrayNews.php";
 ?>
-    <main>
+<main>
        
-        <div id="lajmet">
-            <div id="lajmibox">
-    <div class="lajmi"><div class="ph"><img src=""></div></div>
-    <div class="lajmi"><div class="ph"><img src=""></div></div>
-    <div class="lajmi"><div class="ph"><img src=""></div></div>
-            </div>
+       
+    <!-- <div id="lajmet">
+        <div id="lajmibox">
+<div class="lajmi"><div class="ph2"><img src=""></div></div>
+<div class="lajmi"><div class="ph2"><img src=""></div></div>
+</div>
+</div> -->
+         
+<div id=lajmet>
+    <div id="lajmibox">
+<?php 
+        foreach($listaLajmeve as $lajmi){
+            echo'<div class="lajmi">'.$lajmi["Titulli"].'<div class="ph"><img src=""></div>'.$lajmi["Pershkrimi"].'</div>';
+        }
+        ?>
+</div>
     </div>
-    <div id="lajmet">
-        <div id="lajmibox">
-<div class="lajmi"><div class="ph2"><img src=""></div></div>
-<div class="lajmi"><div class="ph2"><img src=""></div></div>
-        </div>
-</div>
-<div id="lajmet">
-        <div id="lajmibox">
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo architecto excepturi necessitatibus fuga accusamus facilis inventore velit eum obcaecati! Culpa aut perspiciatis tempora mollitia nesciunt voluptatibus fuga explicasbo ullam deserunt?</p>
-    <form action="">
-        
-    </form>
-        </div>
-</div>
-    </main>
+</main>
    <?php 
     include "footer.php";  
 ?>

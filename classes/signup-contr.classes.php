@@ -10,6 +10,5 @@ class SignUpContr {
         $this->$username=$username;
         $this->$password=$password;
     }
-
-    
+ 
 }

@@ -12,7 +12,7 @@
 
 <?php 
 include "header.php";  
-include "arrayNews.php";
+include 'controllers/LajmiController.php';
 ?>
 <main>
        
@@ -27,8 +27,10 @@ include "arrayNews.php";
 <div id=lajmet>
     <div id="lajmibox">
 <?php 
-        foreach($listaLajmeve as $lajmi){
-            echo'<div class="lajmi">'.$lajmi["Titulli"].'<div class="ph"><img src=""></div>'.$lajmi["Pershkrimi"].'</div>';
+        $lajmet = new LajmiController;
+        $all = $lajmet->readData();
+        for($i=0;$i<count($all);$i++){
+            echo'<div class="lajmi">'.$all[$i]["lajmi_titulli"].'<div class="ph"><img class="lajmi-image" src="'.$all[$i]["lajmi_foto"].'"></div>'.$all[$i]["lajmi_pershkrimi"].'</div>';
         }
         ?>
 </div>

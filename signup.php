@@ -19,7 +19,7 @@ include "header.php";
           </div>
           <div class="center">
             <h1>Create Account</h1>
-            <form class="login_form" action="../new/loginVerify.php" method="post" name="form" onsubmit="return validated()">
+            <form class="login_form" action="new/loginVerify.php" method="post" name="form" onsubmit="return validate()">
                 <div class="txt_field">
                     <input autocomplete="off" type="text" name="register-emailaddress" id="email" required>
                     <span></span>

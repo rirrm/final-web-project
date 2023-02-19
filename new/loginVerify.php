@@ -7,11 +7,11 @@ session_start();
 if (isset($_POST['login-btn'])) {
     $login = new LoginLogic($_POST);
     $login->verifyData();
-    return header("Location:../index.php");
+    // return header("Location:../index.php");
 } else if (isset($_POST['register-btn'])) {
     $register = new RegisterLogic($_POST);
     $register->insertData();
-    return header("Location:../index.php");
+    // return header("Location:../index.php");
 } else {
     return header("Location:../index.php");
 }

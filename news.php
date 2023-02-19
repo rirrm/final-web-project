@@ -23,7 +23,6 @@ include 'LajmiController.php';
     <div class="lajmi"><div class="ph"><img class="lajmi-image" src=""></div></div>
     <div class="lajmi"><div class="ph"><img class="lajmi-image" src=""></div></div>
  <div class="lajmi"><div class="ph"><img class="lajmi-image" src=""></div></div>
- 
 </div>
     </div> 
     <div class=lajmet>

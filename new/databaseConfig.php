@@ -6,7 +6,7 @@ class DatabasePDOConfiguration
 
     private $host = "localhost";
     private $username = "root";
-    private $dbName = "lajmet";
+    private $dbName = "lajmett";
     private $password = "";
 
     protected function getConnection()

@@ -9,7 +9,7 @@ class UserMapper extends DatabasePDOConfiguration
 
     public function __construct()
     {
-        $this->db = new Database();
+        $this->conn = $this->getConnection();
     }
 
     public function getUserByID($userId)
@@ -56,7 +56,7 @@ class UserMapper extends DatabasePDOConfiguration
 
     public function insertUser(\SimpleUser $user)
     {
-        $this->query = "INSERT into User (userID, email, username, userpassword, role) values (:email,:username,:pass,:role)";
+        $this->query = "INSERT into User (email, username, userpassword, role) values (:email,:username,:pass,:role)";
         $statement = $this->conn->prepare($this->query);
         $email = $user->getEmail();
         $username = $user->getUsername();

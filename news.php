@@ -17,46 +17,50 @@ include 'LajmiController.php';
 <main>
 
 
-<div id=all>
+
 <div class=lajmet>
     <div class="lajmibox">
+    <div class="lajmi"><div class="ph"><img class="lajmi-image" src=""></div></div>
+    <div class="lajmi"><div class="ph"><img class="lajmi-image" src=""></div></div>
  <div class="lajmi"><div class="ph"><img class="lajmi-image" src=""></div></div>
  
 </div>
     </div> 
     <div class=lajmet>
     <div class="lajmibox">
+ <div class="lajmi"><div class="ph"><img class="lajmi-image" src=""></div></div>
+ <div class="lajmi"><div class="ph"><img class="lajmi-image" src=""></div></div>
     <div class="lajmi"><div class="ph"><img class="lajmi-image" src=""></div></div>
 </div>
     </div> 
     <div class=lajmet>
     <div class="lajmibox">
+ <div class="lajmi"><div class="ph"><img class="lajmi-image" src=""></div></div>
+ <div class="lajmi"><div class="ph"><img class="lajmi-image" src=""></div></div>
     <div class="lajmi"><div class="ph"><img class="lajmi-image" src=""></div></div>
 </div>
 </div> 
-</div>
-        
+ 
 
-
-
-<div class="lajmet">
-    <?php 
-        $lajmet = new LajmiController;
-        $all = $lajmet->readData();
-        $counter = 0;
-        echo '<div class="lajmibox">';
-        foreach ($all as $lajmi) {
-            echo '<div class="lajmi"><div class="ph"><img class="lajmi-image" src="'.$lajmi["lajmi_foto"].'"></div>'.$lajmi["lajmi_titulli"].$lajmi["lajmi_pershkrimi"].'</div>';
-            $counter++;
-            if ($counter % 3 == 0) {
-                echo '</div><div class="lajmibox">';
-            }
+<?php 
+    $lajmet = new LajmiController;
+    $all = $lajmet->readData();
+    $counter =0;
+    foreach($all as $lajmi){
+        if($counter % 4 == 0){
+            echo '<div class="lajmet">';
+            echo '<div class="lajmibox">';
         }
-        echo '</div>'; 
+        echo '<div class="lajmi"><div class="ph"><img class="lajmi-image" src="'.$lajmi["lajmi_foto"].'"></div>'.$lajmi["lajmi_titulli"].$lajmi["lajmi_pershkrimi"].'</div>';
+        if ($counter % 4 == 0) {
+            echo '</div></div>';
+        }
+    }
+    if ($counter % 4 != 0) {
+        echo '</div></div>';
+    }
     ?>
-</div>
 
-    
 </main>
    <?php 
     include "footer.php";  

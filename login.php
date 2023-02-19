@@ -18,7 +18,7 @@ include "header.php";
       </div>
         <div class="center">
             <h1>Login</h1>
-            <form class="login_form" action="../new/loginVerify.php" method="post" name="form" onsubmit="return validate()">
+            <form class="login_form" action="new/loginVerify.php" method="post" name="form" onsubmit="return validate()">
               <div class="txt_field">
                 <input autocomplete="off" type="text" name="username" id="user" required>
                 <span></span>

@@ -14,8 +14,8 @@ body{
   line-height: 1.5;
   width: 100%;
   background-color: #bacbc1;
-}
-
+ }
+/*
 a{
   color: #262626;
   text-decoration: none;
@@ -84,7 +84,7 @@ a{
 .hovernav:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
-}
+} */
 
 
 .lsimg{
@@ -199,7 +199,7 @@ text-decoration: none;
 .signup_link a:hover{
 text-decoration: underline;
 }
-
+/* 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 .container{
@@ -284,4 +284,4 @@ text-decoration: underline;
 .footer-col .social-links a:hover{
 	color: #f3f3ec;
 	background-color: #f3f3ec;
-}
+} */

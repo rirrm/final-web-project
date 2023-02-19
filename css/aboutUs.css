@@ -15,7 +15,7 @@ body{
     width: 100%;
     background-color: #bacbc1;
 }
- 
+/*  
 a{
     color: #262626;
     text-decoration: none;
@@ -84,7 +84,7 @@ a{
 .hovernav:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
-}
+} */
 
 #aboutUs{
     background-color: #e9e8e4;
@@ -137,7 +137,7 @@ a{
     text-decoration: underline;
     color: #13765b;
 }
-
+/* 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 
@@ -223,4 +223,4 @@ a{
 .footer-col .social-links a:hover{
 	color: #f3f3ec;
 	background-color: #f3f3ec;
-}
+} */

@@ -16,7 +16,7 @@ body{
     background-color: #bacbc1;
 }
  
-a{
+/* a{
     color: #262626;
     text-decoration: none;
 }
@@ -84,7 +84,7 @@ a{
 .hovernav:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
-}
+} */
 
 
 #banner{
@@ -350,6 +350,7 @@ h3{
     display: block;
   }
 }
+/* 
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
@@ -436,4 +437,4 @@ h3{
 .footer-col .social-links a:hover{
 	color: #f3f3ec;
 	background-color: #f3f3ec;
-}
+} */

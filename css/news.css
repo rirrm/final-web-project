@@ -15,7 +15,7 @@ body{
     width: 100%;
     background-color: #bacbc1;
 }
- 
+/*  
 a{
     color: #262626;
     text-decoration: none;
@@ -84,7 +84,7 @@ a{
 .hovernav:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
-}
+} */
 
 /* main{
     height:37cm;
@@ -92,6 +92,9 @@ a{
     flex-direction: column;
     padding-top:100px;
 } */
+
+
+/* 
 .ph{
   height:300px;
   width:300px;
@@ -115,7 +118,7 @@ a{
     justify-content: space-between;
 }
 
-#lajmibox{
+.lajmibox{
     height:500px;
     width:33.3cm;
     display:flex;
@@ -125,7 +128,7 @@ a{
    
 }
 
-#lajmet{
+.lajmet{
     margin-top:100px;
     background-color: #e9e8e4;
     width: 83%;
@@ -140,8 +143,8 @@ a{
 .lajmi-image {
     width: 20px;
     height: 15px;
-}
-
+} */
+/* 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 
@@ -227,4 +230,4 @@ a{
 .footer-col .social-links a:hover{
 	color: #f3f3ec;
 	background-color: #f3f3ec;
-}
+} */

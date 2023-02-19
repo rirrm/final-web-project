@@ -1,5 +1,5 @@
 <?php
-    require_once './config/database.php';
+    require_once 'config/database.php';
 
     class LajmiController{
         public $db;
@@ -54,7 +54,7 @@
             $query->bindParam(':id',$id);
             $query->execute();
 
-            return header('Location : dashboard.php');
+            return header('Location: dashboard.php');
         }
 
     }

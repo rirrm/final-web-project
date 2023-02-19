@@ -12,29 +12,51 @@
 
 <?php 
 include "header.php";  
-include 'controllers/LajmiController.php';
+include 'LajmiController.php';
 ?>
 <main>
-       
-       
-    <!-- <div id="lajmet">
-        <div id="lajmibox">
-<div class="lajmi"><div class="ph2"><img src=""></div></div>
-<div class="lajmi"><div class="ph2"><img src=""></div></div>
+
+
+<div id=all>
+<div class=lajmet>
+    <div class="lajmibox">
+ <div class="lajmi"><div class="ph"><img class="lajmi-image" src=""></div></div>
+ 
 </div>
-</div> -->
-         
-<div id=lajmet>
-    <div id="lajmibox">
-<?php 
+    </div> 
+    <div class=lajmet>
+    <div class="lajmibox">
+    <div class="lajmi"><div class="ph"><img class="lajmi-image" src=""></div></div>
+</div>
+    </div> 
+    <div class=lajmet>
+    <div class="lajmibox">
+    <div class="lajmi"><div class="ph"><img class="lajmi-image" src=""></div></div>
+</div>
+</div> 
+</div>
+        
+
+
+
+<div class="lajmet">
+    <?php 
         $lajmet = new LajmiController;
         $all = $lajmet->readData();
-        for($i=0;$i<count($all);$i++){
-            echo'<div class="lajmi">'.$all[$i]["lajmi_titulli"].'<div class="ph"><img class="lajmi-image" src="'.$all[$i]["lajmi_foto"].'"></div>'.$all[$i]["lajmi_pershkrimi"].'</div>';
+        $counter = 0;
+        echo '<div class="lajmibox">';
+        foreach ($all as $lajmi) {
+            echo '<div class="lajmi"><div class="ph"><img class="lajmi-image" src="'.$lajmi["lajmi_foto"].'"></div>'.$lajmi["lajmi_titulli"].$lajmi["lajmi_pershkrimi"].'</div>';
+            $counter++;
+            if ($counter % 3 == 0) {
+                echo '</div><div class="lajmibox">';
+            }
         }
-        ?>
+        echo '</div>'; 
+    ?>
 </div>
-    </div>
+
+    
 </main>
    <?php 
     include "footer.php";  

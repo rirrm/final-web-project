@@ -1,5 +1,6 @@
 <?php 
-  require_once '../controllers/LajmiController.php';
+  require_once '../LajmiController.php';
+  require_once '../ProdController.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,6 +11,8 @@
     <title>Document</title>
 </head>
 <body>
+  <h1>Dashboard</h1>
+  
 <div>
     <table class="content-table">
         <thead>
@@ -17,6 +20,7 @@
               <th>Titulli i lajmit</th>
               <th>Foto e lajmit</th>
               <th>Pershkrimi</th>
+              <th colspan="2" ><a href="krijo-lajmin.php">Krijo Lajmin</a></th>
             </tr>
         </thead>
         <tbody>
@@ -30,6 +34,32 @@
           <td><?php echo $lajmi['lajmi_pershkrimi'];?></td>
           <td><a href="edito-lajmin.php?id=<?php echo $lajmi['Id'];?>">Edit</a></td>
           <td><a href="fshij-lajmin.php?id=<?php echo $lajmi['Id'];?>">Delete</a></td>
+        </tr>  
+        <?php endforeach; ?>
+      </tbody>
+    </table>
+    
+    
+    <table class="content-table">
+        <thead>
+            <tr>
+              <th>Pershkrimi i produktit</th>
+              <th>Foto e produktit</th>
+              <th>Cmimi i produktit</th>
+              <th colspan="2" ><a href="krijo-produktin.php">Krijo Produktin</a></th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php 
+          $p = new ProdController;
+          $allProduktet = $p->readData();
+          foreach($allProduktet as $produkti): ?>
+        <tr>
+          <td><?php echo $produkti['prod_pershkrimi'];?></td>
+          <td><?php echo $produkti['prod_foto'];?></td>
+          <td><?php echo $produkti['prod_cmimi'];?></td>
+          <td><a href="edito-produktin.php?id=<?php echo $produkti['Id'];?>">Edit</a></td>
+          <td><a href="fshij-produktin.php?id=<?php echo $produkti['Id'];?>">Delete</a></td>
         </tr>  
         <?php endforeach; ?>
       </tbody>

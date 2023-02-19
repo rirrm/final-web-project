@@ -1,9 +1,9 @@
 <?php 
-    require_once '../controllers/LajmiController.php';
+    require_once '../LajmiController.php';
 
     $lajmi = new LajmiController;
-    if(isset($_GET['Id'])){
-        $lajmiId = $_GET['Id'];
+    if(isset($_GET['id'])){
+        $lajmiId = $_GET['id'];
     }
 
     $currentLajm = $lajmi ->edit($lajmiId);

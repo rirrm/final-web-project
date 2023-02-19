@@ -11,9 +11,10 @@
     <body>
         <main>
 <?php 
-include "header.php";  
+include "header.php"; 
+include "ProdController.php"; 
 ?>
-                <div id="all">
+                <!-- <div id="all">
                     <div class="rreshti">
                     <div class="p"><img src="images/beauty of joseon 19.99-Beauty of Joseon Glow Serum Proplis & Niacinamide.jpg" class="k"><div class="pershkrimi">Beauty of Joseon Glow Serum Proplis & Niacinamide<br><b>19.99€</b></div><a href="login.html"><button class="blej">JOIN THE WAITLIST</button></a></div>
                     <div class="p"><img src="images/beauty of joseon 20.00-Beauty of Joseon Relief Sun Rice + Probiotics 50ml.jpg" class="k"><div class="pershkrimi">Beauty of Joseon Relief Sun Rice + Probiotics 50ml<br><b>20.00€</b></div><a href="login.html"><button class="blej">JOIN THE WAITLIST</button></a></div>
@@ -56,9 +57,29 @@ include "header.php";
                         <div class="p"><img src="images/carmex 3.20-CARMEX PREMIUM VANILLA STICK SPF 15.jpg" class="k"><div class="pershkrimi">CARMEX PREMIUM VANILLA STICK SPF 15<br><b>3.20€</b></div><a href="login.html"><button class="blej">JOIN THE WAITLIST</button></a></div>
                         <div class="p"><img src="images/etude house 7.50-Etude Dear Darling Water Gel Tint PK004.jpg" class="k"><div class="pershkrimi">Etude Dear Darling Water Gel Tint PK004<br><b>7.50€</b></div><a href="login.html"><button class="blej">JOIN THE WAITLIST</button></a></div>
                     </div>
-            </div>
+            </div> 
+-->
 
-    
+<div id="all">
+    <?php 
+        $produktet = new ProdController;
+        $all = $produktet->readData();
+        $counter = 0;
+        foreach ($all as $product) {
+            if ($counter % 4 == 0) {
+                echo '<div class="rreshti">';
+            }
+            echo '<div class="p"><img src="' . $product["prod_foto"] . '" class="k"><div class="pershkrimi">' . $product["prod_pershkrimi"] . '<br><b>' . $product["prod_cmimi"] . '€</b></div><a href="login.php"><button class="blej">JOIN THE WAITLIST</button></a></div>';
+            $counter++;
+            if ($counter % 4 == 0) {
+                echo '</div>';
+            }
+        }
+        if ($counter % 4 != 0) {
+            echo '</div>';
+        }
+    ?>
+</div>
         </main>
        <?php 
     include "footer.php";  

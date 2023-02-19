@@ -1,5 +1,5 @@
 <?php
-    require_once './config/database.php';
+    require_once 'config/database.php';
 
     class ProdController{
         public $db;
@@ -16,7 +16,7 @@
 
         public function insert($request){
             $request['foto']='./images/'.$request['foto'];
-            $query=$this->db->pdo->prepare('INSERT INTO lajmi (prod_pershkrimi,prod_foto,prod_cmimi)
+            $query=$this->db->pdo->prepare('INSERT INTO produkti (prod_pershkrimi,prod_foto,prod_cmimi)
             VALUES(:prod_pershkrimi,:prod_foto,:prod_cmimi)');
 
             $query->bindParam(':prod_pershkrimi',$request['pershkrimi']);

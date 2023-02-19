@@ -1,32 +1,34 @@
 <?php 
-    require_once '../LajmiController.php';
+    require_once '../ProdController.php';
 
-    $lajmi = new LajmiController;
+    $produkti = new ProdController;
     if(isset($_POST['Submit'])){
-        $lajmi->insert($_POST);
+        $produkti->insert($_POST);
     }
+
 ?>
 
-<div id="lajmet">
-    <div id="lajmibox">
+<div id="produktet">
+    <div id="produktibox">
 
-    <div class="lajmi">
+    <div class="produkti">
+<div>
     <form method="POST"> 
-        Titulli:
-        <input type="text" name="titulli">
+        Pershkrimi:
+        <textarea name="pershkrimi"cols="30" rows="10"></textarea>
         <br>
         Foto:
         <input type="file" name="foto">
         <br>
-        Pershkrimi:
-        <textarea name="pershkrimi"cols="30" rows="10" class="ph"></textarea>
+        Cmimi:
+        <input type="text" name="cmimi">
         <br>
         <input type="Submit" name="Submit" value="Save">
     </form>
 </div>
+</div>
+</div>
 
-</div>
-</div>
 
 <style>
     
@@ -38,14 +40,14 @@
   margin-left: 25px;
 }
 
-.lajmi{
+.produkti{
     height:500px;
     width:350px;
     background-color: #fff;
     justify-content: space-between;
 }
 
-#lajmibox{
+#produktibox{
     height:500px;
     width:33.3cm;
     display:flex;
@@ -55,7 +57,7 @@
    
 }
 
-#lajmet{
+#produktet{
     margin-top:70px;
     background-color: #e9e8e4;
     width: 83%;

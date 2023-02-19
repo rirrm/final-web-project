@@ -19,23 +19,23 @@ include "header.php";
           </div>
           <div class="center">
             <h1>Create Account</h1>
-            <form class="login_form" action="./signup.html" method="post" name="form" onsubmit="return validated()">
+            <form class="login_form" action="../new/loginVerify.php" method="post" name="form" onsubmit="return validated()">
                 <div class="txt_field">
-                    <input autocomplete="off" type="text" name="emailaddress" id="email" required>
+                    <input autocomplete="off" type="text" name="register-emailaddress" id="email" required>
                     <span></span>
                     <label for="emailaddress">Email</label>
                 </div>
               <div class="txt_field">
-                <input autocomplete="off" type="text" name="username" id="user" required>
+                <input autocomplete="off" type="text" name="register-username" id="user" required>
                 <span></span>
                 <label for="username">Username</label>
               </div>
               <div class="txt_field">
-                <input type="password" name="password" id="pass" required>
+                <input type="password" name="register-password" id="pass" required>
                 <span></span>
                 <label for="password" >Password</label>
               </div>
-              <input type="submit" name="login-btn" value="REGISTER">
+              <input type="submit" name="register-btn" value="REGISTER">
               <div class="signup_link">
                 Already have an account?<a href="login.html">Sign in!</a>
               </div>

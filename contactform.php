@@ -19,7 +19,7 @@
         
         <div class="center">
             <h1>Kontakti</h1>
-            <form class="contact_form" action="./contactform.html" method="post" name="form" onsubmit="return validated()">
+            <form class="contact_form" action="new/kontakt.php" method="post" name="form" onsubmit="return validated()">
               <div class="txt_field">
                 <input autocomplete="off" type="text" name="emri" id="emri" required>
                 <span></span>
@@ -32,7 +32,7 @@
               </div>
                     
               <textarea id="subject" name="subject" placeholder="Shkruani mesazhin.." rows="10" cols="70"></textarea>
-              <input type="submit" name="login-btn" value="SEND">
+              <input type="submit" name="submit-btn" value="SEND">
               </div>
             </form>
           </div>

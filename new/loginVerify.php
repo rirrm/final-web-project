@@ -41,6 +41,17 @@ class LoginLogic
         }
     }
 
+    function validoTeDhenat($email, $password){
+        global $allUsers;
+        foreach($allUsers as $user){
+            if($user['email'] == $email && $user['password'] == $password){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    }
+
     private function variablesNotDefinedWell($username, $password)
     {
         if (empty($username) || empty($password)) {

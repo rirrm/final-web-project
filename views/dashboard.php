@@ -116,6 +116,33 @@
                 ?>
             </tbody>
         </table>
+
+        <h2>Message list:</h2>
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <td>Emri</td>
+                    <td>Mbiemri</td>
+                    <td>Mesazhi</td>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $controller = new kontaktController();
+                $kontaktList = $controller->getAllUsers();
+
+                foreach ($kontaktList as $controller) {
+                ?>
+                    <tr>
+                        <td><?php echo $controller['email']; ?></td>
+                        <td><?php echo $controller['username']; ?></td>
+                        <td><a href="fshij-userin.php?id=<?php echo $user['userID'];?>">Fshij</td>
+                    </tr>
+                <?php
+                }
+                ?>
+            </tbody>
+        </table>
 </div>
 </body>
 <style>

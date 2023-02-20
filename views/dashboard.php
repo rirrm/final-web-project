@@ -64,6 +64,39 @@
         <?php endforeach; ?>
       </tbody>
     </table>
+
+    <h2>User list:</h2>
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <td>Emri</td>
+                    <td>Mbiemri</td>
+                    <td>Email</td>
+                    <td>Detajet</td>
+                    <td>Modifiko</td>
+                    <td>Fshij</td>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach ($userList as $user) {
+                ?>
+                    <tr>
+                        <td><?php echo $user['userName']; ?></td>
+                        <td><?php echo $user['userLastName']; ?></td>
+                        <td><?php echo $user['userEmail']; ?></td>
+                        <td><a href=<?php echo "../businessLogic/detailsUser.php?id=" . $user['UserID']; //to be continued by students
+                                    ?>>Detajet</a></td>
+                        <td><a href=<?php echo "../views/edit.php?id=" . $user['UserID'];
+                                    ?>>Modifiko</td>
+                        <td><a href=<?php echo "../businessLogic/deleteUser.php?id=" . $user['UserID'];
+                                    ?>>Fshij</td>
+                    </tr>
+                <?php
+                }
+                ?>
+            </tbody>
+        </table>
 </div>
 </body>
 <style>

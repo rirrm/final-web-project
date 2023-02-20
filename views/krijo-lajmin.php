@@ -21,7 +21,7 @@
         Pershkrimi:
         <textarea name="pershkrimi"cols="30" rows="10" class="ph"></textarea>
         <br>
-        <input type="Submit" name="Submit" value="Save">
+        <input type="Submit" name="Submit" value="Save" id="button">
     </form>
 </div>
 
@@ -44,8 +44,7 @@
     background-color: #fff;
     border-radius: 10px;
     margin-top: 15px;
-    padding-top: 10px;
-    justify-content: space-around;
+    padding: 10px;
 }
 
 #lajmibox{
@@ -67,5 +66,22 @@
     border-radius: 10px;
     padding: 50px 50px;
     margin-bottom:100px;
+}
+#button{
+        margin:10px;
+        margin-left: auto;
+        width: 7.5cm;
+        height:40px;
+        border:0px;
+        background-color:white;
+        border: 3px solid #13765b;
+        font-size:larger;
+        transition: all 0.5s;
+        cursor: pointer;
+        color:#13765b;
+}
+#button:hover{
+    background-color:#13765b;
+    color:white;
 }
     </style>

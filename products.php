@@ -14,7 +14,7 @@
 include "header.php"; 
 include "ProdController.php"; 
 ?>
-                <div id="all">
+                <!-- <div id="all">
                     <div class="rreshti">
                     <div class="p"><img src="images/1.jpg" class="k"><div class="pershkrimi">Beauty of Joseon Glow Serum Proplis & Niacinamide<br><b>19.99€</b></div><a href="login.html"><button class="blej">JOIN THE WAITLIST</button></a></div>
                     <div class="p"><img src="images/2.jpg" class="k"><div class="pershkrimi">Beauty of Joseon Relief Sun Rice + Probiotics 50ml<br><b>20.00€</b></div><a href="login.html"><button class="blej">JOIN THE WAITLIST</button></a></div>
@@ -57,7 +57,7 @@ include "ProdController.php";
                         <div class="p"><img src="images/27.jpg" class="k"><div class="pershkrimi">CARMEX PREMIUM VANILLA STICK SPF 15<br><b>3.20€</b></div><a href="login.html"><button class="blej">JOIN THE WAITLIST</button></a></div>
                         <div class="p"><img src="images/28.jpg" class="k"><div class="pershkrimi">Etude Dear Darling Water Gel Tint PK004<br><b>7.50€</b></div><a href="login.html"><button class="blej">JOIN THE WAITLIST</button></a></div>
                     </div>
-            </div> 
+            </div>  -->
 
 
 <div id="all">

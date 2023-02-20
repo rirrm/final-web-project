@@ -42,7 +42,10 @@
     height:500px;
     width:350px;
     background-color: #fff;
-    justify-content: space-between;
+    border-radius: 10px;
+    margin-top: 15px;
+    padding-top: 10px;
+    justify-content: space-around;
 }
 
 #lajmibox{
@@ -51,8 +54,7 @@
     display:flex;
     flex-direction:initial;
     align-items: center;
-    justify-content: space-around;
-   
+    justify-content: space-around;   
 }
 
 #lajmet{

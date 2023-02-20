@@ -56,7 +56,7 @@ class UserMapper extends DatabasePDOConfiguration
 
     public function insertUser(\SimpleUser $user)
     {
-        $this->query = "INSERT into User (email, username, userpassword, role) values (:email,:username,:pass,:role)";
+        $this->query = "INSERT into user (email, username, userpassword, role) values (:email,:username,:pass,:role)";
         $statement = $this->conn->prepare($this->query);
         $email = $user->getEmail();
         $username = $user->getUsername();
@@ -71,9 +71,11 @@ class UserMapper extends DatabasePDOConfiguration
 
     public function deleteUser($userId)
     {
-        $this->query = "DELETE from user where userid=:id";
+        $this->query = "DELETE from user where userID=:id";
         $statement = $this->conn->prepare($this->query);
         $statement->bindParam(":id", $userId);
         $statement->execute();
+         return header('Location: ../views/dashboard.php');
     }
+
 }

@@ -23,6 +23,15 @@ class kontaktController extends DatabasePDOConfiguration
        $statement->execute();
    }
 
+   public function getAllKontaktet()
+   {
+       $this->query = "SELECT * from kontakti";
+       $statement = $this->conn->prepare($this->query);
+       $statement->execute();
+       $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+       return $result;
+   }
+
    public function deleteKontaktin($kontaktId)
    {
        $this->query = "DELETE from kontakti where Id=:id";

@@ -3,7 +3,7 @@
   require_once '../ProdController.php';
   require_once '../homeController.php';
   include_once '../new/userMapper.php';
-  require_once '../new/kontaktController.php';
+  require_once '../kontaktController.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -130,14 +130,15 @@
             <tbody>
                 <?php
                 $controller = new kontaktController();
-                $kontaktList = $controller->getAllUsers();
+                $kontaktList = $controller->getAllKontaktet();
 
-                foreach ($kontaktList as $controller) {
+                foreach ($kontaktList as $controllerr) {
                 ?>
                     <tr>
-                        <td><?php echo $controller['email']; ?></td>
-                        <td><?php echo $controller['username']; ?></td>
-                        <td><a href="fshij-userin.php?id=<?php echo $user['userID'];?>">Fshij</td>
+                        <td><?php echo $controllerr['emri']; ?></td>
+                        <td><?php echo $controllerr['mbiemri']; ?></td>
+                        <td><?php echo $controllerr['mesazhi']; ?></td>
+                        <td><a href="fshij-kontaktin.php?id=<?php echo $controllerr['Id'];?>">Fshij</td>
                     </tr>
                 <?php
                 }

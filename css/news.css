@@ -86,14 +86,11 @@ a{
     transform-origin: bottom left;
 } */
 
-/* main{
-    height:37cm;
-    display: flex;
-    flex-direction: column;
-    padding-top:100px;
-} */
+ main{
+    height: 75cm;
+} 
 
-#aboutUs{
+.aboutUs{
     background-color: #e9e8e4;
     width: 83%;
     margin-left: 5%;
@@ -102,42 +99,42 @@ a{
     text-align: center;
     border-radius: 10px;
     padding: 50px 50px;
-}
-
-
-#aboutUs2{
-    display: flex;
-    flex-direction: row;
-    width: 90%;
-    margin-left: 5%;
-    height: 620px;
-    margin-top: 5%;
-    text-align: center;
-    border-radius: 10px;
-    background-color: #e9e8e4;
     margin-bottom: 100px;
 }
 
-#aboutUs2Txt{
+
+
+.aboutUs2{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    /* margin-left: 5%; */
+    height: 520px;
+    /* margin-top: 5%; */
+    text-align: center;
+    border-radius: 10px;
+    background-color: #e9e8e4;
+    /* margin-bottom: 200px; */
+}
+
+.aboutUs2Txt{
     width: 60%;
-    margin: 30px 20px;
-    padding: 25px;
+    margin: 0px 20px;
+    /* padding: 20px; */
     font-size: 20px;
     text-align: center;
 }
-
-#img{
+.imgg{
     width: 100%;
-    height: 620px;
-    margin-right: 200px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    
+    height: 300px;
 }
-
-#shiko{
-    text-decoration: underline;
-    color: #13765b;
+.img{
+    width: 100%;
+    height: 500px;
+    margin-right: 100px;
+    margin-left: 100px;
+    border-radius: 10px;
+    
 }
 
 /* #aboutUs{

@@ -18,6 +18,7 @@
         </div>
         <div id="head2">
             <ul>
+                <li><a href="views/dashboard.php" class="hovernav">Dashboard</a></li>
                 <li><a href="login.php" class="hovernav">Kyçu</a></li>
             </ul>
         </div>

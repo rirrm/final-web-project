@@ -36,10 +36,14 @@ class Kontakti
     
     public function insertData()
     {
-        $kontakt = new Kontakti($this->emri, $this->mbiemri, $this->mesazhi);
-
+        $kontakt = new Kontakti([
+            'emri' => $this->emri,
+            'mbiemri' => $this->mbiemri,
+            'subject' => $this->mesazhi,
+        ]);
+        
         $controller = new kontaktController();
-        $controller->insertUser($kontakt);
+        $controller->insertKontaktin($kontakt);
         header("Location:../index.php");
     }
 }

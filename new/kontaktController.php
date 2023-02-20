@@ -18,7 +18,7 @@ class kontaktController extends DatabasePDOConfiguration
        $mbiemri = $kontakt->getMbiemri();
        $mesazhi = $kontakt->getMesazhi();
        $statement->bindParam(":emri", $emri);
-       $statement->bindParam(":mbiemri", $umbiemri);
+       $statement->bindParam(":mbiemri", $mbiemri);
        $statement->bindParam(":mesazhi", $mesazhi);
        $statement->execute();
    }

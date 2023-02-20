@@ -11,6 +11,7 @@
 <body>
     <?php 
     include "header.php";
+    include "new/kontakt.php";
     
 ?>
 

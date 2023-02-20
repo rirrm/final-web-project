@@ -3,6 +3,7 @@
   require_once '../ProdController.php';
   require_once '../homeController.php';
   include_once '../new/userMapper.php';
+  require_once '../new/kontaktController.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -77,5 +77,4 @@ class UserMapper extends DatabasePDOConfiguration
         $statement->execute();
          return header('Location: ../views/dashboard.php');
     }
-
 }

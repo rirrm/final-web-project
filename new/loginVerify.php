@@ -36,6 +36,7 @@ class LoginLogic
             echo '2';
             header('Location:../home.php');
         } else {
+            return fals
             echo '3';
             header("Location:../index.php");
         }
@@ -62,7 +63,9 @@ class LoginLogic
                 $obj = new SimpleUser($user['userID'], $user['username'], $user['userpassword'], $user['role']);
                 $obj->setSession();
             }
+            $_SESSION['loggedin'] = true;
             return true;
+            
         } else return false;
     }
 }

@@ -9,7 +9,7 @@ class kontaktController extends DatabasePDOConfiguration
     {
         $this->conn = $this->getConnection();
     }
-    
+
    public function insertKontaktin(\Kontakti $kontakt)
    {
        $this->query = "INSERT into kontakti (emri, mbiemri, mesazhi) values (:emri,:mbiemri,:mesazhi)";
@@ -21,6 +21,15 @@ class kontaktController extends DatabasePDOConfiguration
        $statement->bindParam(":mbiemri", $umbiemri);
        $statement->bindParam(":mesazhi", $mesazhi);
        $statement->execute();
+   }
+
+   public function deleteKontaktin($kontaktId)
+   {
+       $this->query = "DELETE from kontakti where Id=:id";
+       $statement = $this->conn->prepare($this->query);
+       $statement->bindParam(":id", $kontaktId);
+       $statement->execute();
+        return header('Location: ../views/dashboard.php');
    }
 }
 

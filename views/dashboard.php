@@ -85,8 +85,7 @@
                     <tr>
                         <td><?php echo $user['email']; ?></td>
                         <td><?php echo $user['username']; ?></td>
-                        <td><a href=<?php echo "../businessLogic/deleteUser.php?id=" . $user['userID'];
-                                    ?>>Fshij</td>
+                        <td><a href="fshij-userin.php?id=<?php echo $user['userID'];?>">Fshij</td>
                     </tr>
                 <?php
                 }

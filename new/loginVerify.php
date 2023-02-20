@@ -36,9 +36,19 @@ class LoginLogic
             echo '2';
             header('Location:../home.php');
         } else {
-            return fals
             echo '3';
             header("Location:../index.php");
+        }
+    }
+
+    function validoTeDhenat($email, $password){
+        global $allUsers;
+        foreach($allUsers as $user){
+            if($user['email'] == $email && $user['password'] == $password){
+                return true;
+            }else{
+                return false;
+            }
         }
     }
 
@@ -55,7 +65,7 @@ class LoginLogic
         $mapper = new UserMapper();
         $user = $mapper->getUserByUsername($username);
         if ($user == null || count($user) == 0) return false;
-        else if (password_verify($password, $user['userPassword'])) {
+        else if (password_verify($password, $user['userpassword'])) {
             if ($user['role'] == 1) {
                 $obj = new Admin($user['userID'], $user['username'], $user['userpassword'], $user['role']);
                 $obj->setSession();

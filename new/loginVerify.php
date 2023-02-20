@@ -3,15 +3,15 @@ include_once 'adminClass.php';
 include_once 'simpleUserClass.php';
 require_once 'userMapper.php';
 session_start();
-//main
+
 if (isset($_POST['login-btn'])) {
     $login = new LoginLogic($_POST);
     $login->verifyData();
-    // return header("Location:../index.php");
+    return header("Location:../index.php");
 } else if (isset($_POST['register-btn'])) {
     $register = new RegisterLogic($_POST);
     $register->insertData();
-    // return header("Location:../index.php");
+    return header("Location:../index.php");
 } else {
     return header("Location:../index.php");
 }
@@ -56,10 +56,10 @@ class LoginLogic
         if ($user == null || count($user) == 0) return false;
         else if (password_verify($password, $user['userPassword'])) {
             if ($user['role'] == 1) {
-                $obj = new Admin($user['id'], $user['username'], $user['password'], $user['role']);
+                $obj = new Admin($user['userID'], $user['username'], $user['userpassword'], $user['role']);
                 $obj->setSession();
             } else {
-                $obj = new SimpleUser($user['id'], $user['username'], $user['password'], $user['role'], "");
+                $obj = new SimpleUser($user['userID'], $user['username'], $user['userpassword'], $user['role']);
                 $obj->setSession();
             }
             return true;

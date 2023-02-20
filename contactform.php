@@ -11,7 +11,7 @@
 <body>
     <?php 
     include "header.php";
-    include "new/kontakt.php";
+    include "kontakt.php";
     
 ?>
 
@@ -20,7 +20,7 @@
         
         <div class="center">
             <h1>Kontakti</h1>
-            <form class="contact_form" action="new/kontakt.php" method="post" name="form" onsubmit="return validated()">
+            <form class="contact_form" action="kontakt.php" method="post" name="form" onsubmit="return validated()">
               <div class="txt_field">
                 <input autocomplete="off" type="text" name="emri" id="emri" required>
                 <span></span>

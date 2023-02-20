@@ -4,7 +4,7 @@ require_once 'kontaktController.php';
 if (isset($_POST['submit-btn'])) {
     $kontakt = new Kontakti($_POST);
     $kontakt->insertData();
-    return header("Location:../index.php");
+    return header("Location:index.php");
 }
 
 class Kontakti
@@ -44,7 +44,7 @@ class Kontakti
         
         $controller = new kontaktController();
         $controller->insertKontaktin($kontakt);
-        header("Location:../index.php");
+        header("Location:index.php");
     }
 }
     ?>

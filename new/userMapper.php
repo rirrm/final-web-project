@@ -1,7 +1,7 @@
 <?php
-require_once "databaseConfig.php";
+require_once "../config/database.php";
 
-class UserMapper extends DatabasePDOConfiguration
+class UserMapper extends Database
 {
 
     private $db;
@@ -9,72 +9,73 @@ class UserMapper extends DatabasePDOConfiguration
 
     public function __construct()
     {
-        $this->conn = $this->getConnection();
+        $this->db=new Database;
+        // $this->conn = $this->getConnection();
     }
 
     public function getUserByID($userId)
     {
-        $this->query = "SELECT * from user where userid=:id";
-        $statement = $this->conn->prepare($this->query);
-        $statement->bindParam(":id", $userId);
-        $statement->execute();
-        $result = $statement->fetch(PDO::FETCH_ASSOC);
+        $query =$this->db->pdo->query("SELECT * from user where userid=:id");
+        // $statement = $this->conn->prepare($this->query);
+        $query->bindParam(":id", $userId);
+        $query->execute();
+         $result = $query->fetch();
         return $result;
     }
 
     public function edit(\SimpleUser $user, $id)
     {
-        $this->query = "UPDATE user set username=:username, email=:email where UserID=:id";
+        $query =$this->db->pdo->prepare("UPDATE user set username=:username, email=:email where UserID=:id");
         var_dump($user);
-        $statement = $this->conn->prepare($this->query);
+        // $statement = $this->conn->prepare($this->query);
         $email = $user->getEmail();
         $username = $user->getUsername();
-        $statement->bindParam(":email", $email);
-        $statement->bindParam(":username", $username);
-        $statement->bindParam(":id", $id);
-        $statement->execute();
+        $query->bindParam(":email", $email);
+        $query->bindParam(":username", $username);
+        $query->bindParam(":id", $id);
+        $query->execute();
     }
 
     public function getUserByUsername($username)
     {
-        $this->query = "SELECT * from user where username=:username";
-        $statement = $this->conn->prepare($this->query);
-        $statement->bindParam(":username", $username);
-        $statement->execute();
-        $result = $statement->fetch(PDO::FETCH_ASSOC);
+        $query =$this->db->pdo->prepare("SELECT * from user where username=:username");
+        // $statement = $this->conn->prepare($this->query);
+        $query->bindParam(":username", $username);
+        $query->execute();
+        $result = $query->fetch();
         return $result;
     }
 
     public function getAllUsers()
     {
-        $this->query = "SELECT * from user";
-        $statement = $this->conn->prepare($this->query);
-        $statement->execute();
-        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        $query =$this->db->pdo->query("SELECT * from user");
+        // $statement = $this->conn->prepare($this->query);
+        $query->execute();
+        $result = $query->fetchAll();
         return $result;
     }
 
     public function insertUser(\SimpleUser $user)
     {
-        $this->query = "INSERT into user (email, username, userpassword, role) values (:email,:username,:pass,:role)";
-        $statement = $this->conn->prepare($this->query);
+        $query =$this->db->pdo->prepare("INSERT into user (email, username, userpassword, role) values (:email,:username,:pass,:role)");
+        // $statement = $this->conn->prepare($this->query);
         $email = $user->getEmail();
         $username = $user->getUsername();
         $pass = password_hash($user->getPassword(), PASSWORD_BCRYPT);
         $role = $user->getRole();
-        $statement->bindParam(":email", $email);
-        $statement->bindParam(":username", $username);
-        $statement->bindParam(":pass", $pass);
-        $statement->bindParam(":role", $role);
-        $statement->execute();
+        $query->bindParam(":email", $email);
+        $query->bindParam(":username", $username);
+        $query->bindParam(":pass", $pass);
+        $query->bindParam(":role", $role);
+        $query->execute();
     }
 
     public function deleteUser($userId)
     {
-        $this->query = "DELETE from user where userID=:id";
-        $statement = $this->conn->prepare($this->query);
-        $statement->bindParam(":id", $userId);
-        $statement->execute();
-         return header('Location: ../views/dashboard.php');
+        $query =$this->db->pdo->prepare("DELETE from user where userID=:id");
+        // $statement = $this->conn->prepare($this->query);
+        $query->bindParam(":id", $userId);
+        $query->execute();
+        return header('Location: ../views/dashboard.php');
     }
 }

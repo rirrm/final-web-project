@@ -17,15 +17,49 @@
                 <a href="index.php"><img src="images/logo.png" id="img1"></a>
         </div>
         <div id="head2">
-            <ul>
-                <li><a href="views/dashboard.php" class="hovernav">Dashboard</a></li>
-                <li><a href="login.php" class="hovernav">Kyçu</a></li>
+            <ul>  <?php
+       if (isset($_SESSION["role"]) && $_SESSION['role'] == '1') {
+     echo 'test';
+      ?>
+        <li><a href="views/dashboard.php" class="hovernav">
+          Dashboard</a></li>
+      <?php
+       }
+       if (isset($_SESSION["loggedin"]) && $_SESSION['loggedin'] == true) {
+     ?>
+       <li><a href="logout.php" class="hovernav">Logout</a></li>
+     <?php
+       } else {
+     ?>
+       <li><a href="login.php" class="hovernav">Kyçu</a></li>
+     <?php
+       }
+     ?>
             </ul>
         </div>
         </div>
     </header>
     <style>
         
+
+
+
+        <ul class="headerList">
+      <?php
+      if (isset($_SESSION["role"]) && $_SESSION['role'] == '1') {
+        echo 'test';
+      ?>
+
+        <a href="dashboard.php">
+          <li>Dashboard</li>
+        </a>
+      <?php
+      }
+      ?>
+
+
+
+
 a{
     color: #262626;
     text-decoration: none;

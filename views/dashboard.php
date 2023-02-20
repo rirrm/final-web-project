@@ -1,6 +1,7 @@
 <?php 
   require_once '../LajmiController.php';
   require_once '../ProdController.php';
+  include_once '../new/userMapper.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,27 +70,22 @@
         <table class="content-table">
             <thead>
                 <tr>
-                    <td>Emri</td>
-                    <td>Mbiemri</td>
                     <td>Email</td>
-                    <td>Detajet</td>
-                    <td>Modifiko</td>
+                    <td>Username</td>
                     <td>Fshij</td>
                 </tr>
             </thead>
             <tbody>
                 <?php
+                $mapper = new userMapper();
+                $userList = $mapper->getAllUsers();
+
                 foreach ($userList as $user) {
                 ?>
                     <tr>
-                        <td><?php echo $user['userName']; ?></td>
-                        <td><?php echo $user['userLastName']; ?></td>
-                        <td><?php echo $user['userEmail']; ?></td>
-                        <td><a href=<?php echo "../businessLogic/detailsUser.php?id=" . $user['UserID']; //to be continued by students
-                                    ?>>Detajet</a></td>
-                        <td><a href=<?php echo "../views/edit.php?id=" . $user['UserID'];
-                                    ?>>Modifiko</td>
-                        <td><a href=<?php echo "../businessLogic/deleteUser.php?id=" . $user['UserID'];
+                        <td><?php echo $user['email']; ?></td>
+                        <td><?php echo $user['username']; ?></td>
+                        <td><a href=<?php echo "../businessLogic/deleteUser.php?id=" . $user['userID'];
                                     ?>>Fshij</td>
                     </tr>
                 <?php

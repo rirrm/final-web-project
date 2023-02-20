@@ -1,6 +1,7 @@
 <?php 
   require_once '../LajmiController.php';
   require_once '../ProdController.php';
+  require_once '../homeController.php';
   include_once '../new/userMapper.php';
 ?>
 <!DOCTYPE html>
@@ -61,6 +62,29 @@
           <td><?php echo $produkti['prod_cmimi'];?></td>
           <td><a href="edito-produktin.php?id=<?php echo $produkti['Id'];?>">Edit</a></td>
           <td><a href="fshij-produktin.php?id=<?php echo $produkti['Id'];?>">Delete</a></td>
+        </tr>  
+        <?php endforeach; ?>
+      </tbody>
+    </table>
+
+    <table class="content-table">
+        <thead>
+            <tr>
+              <th>Foto e produkuktit</th>
+              <th>Pershkrimi i produktit</th>
+              <th colspan="2" ><a href="krijo-produktinn.php">Krijo Produktin Per Home</a></th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php 
+          $p = new homeController;
+          $allProduktet = $p->readData();
+          foreach($allProduktet as $produkti): ?>
+        <tr>
+          <td><?php echo $produkti['home_image'];?></td>
+          <td><?php echo $produkti['home_emri'];?></td>
+          <td><a href="edito-produktinn.php?id=<?php echo $produkti['Id'];?>">Edit</a></td>
+          <td><a href="fshij-produktinn.php?id=<?php echo $produkti['Id'];?>">Delete</a></td>
         </tr>  
         <?php endforeach; ?>
       </tbody>

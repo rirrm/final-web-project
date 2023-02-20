@@ -33,7 +33,7 @@
         
         </div>
 
-
+<!-- 
         <div>
             <h1 id="rec">Arritjet e reja</h1>
             <div class="wr">
@@ -59,7 +59,28 @@
                 </a>
             </div>
         </div>
+        </div> -->
+<?php
+    require_once 'homeController.php';
+
+    $controller = new homeController();
+    $products = $controller->readData();
+?>
+
+<div>
+    <h1 id="rec">Arritjet e reja</h1>
+    <div class="wr">
+        <?php foreach ($products as $product): ?>
+        <div class="divs">
+            <a href="products.php">
+                <img src="<?php echo $product['home_image']; ?>" class="r">
+                <p class="tekstet"><?php echo $product['home_emri']; ?></p>
+            </a>
         </div>
+        <?php endforeach; ?>
+    </div>
+</div>
+
 
         <div id="fotoFundit">
             <div>

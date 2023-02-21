@@ -18,7 +18,7 @@ include "header.php";
       </div>
         <div class="center">
             <h1>Login</h1>
-            <form class="login_form" action="new/loginVerify.php" method="post" name="form" onsubmit="return validated()">
+            <form class="login_form" action="new/loginController.php"method="post" name="form" onsubmit="return validated()">
               <div class="txt_field">
                 <input autocomplete="off" type="text" name="username" id="user" required>
                 <span></span>
@@ -37,7 +37,8 @@ include "header.php";
           </div>
           </div>
        <?php 
-    include "footer.php";  
+    include "footer.php"; 
+    include "new/loginController.php"; 
 ?>
     <script src="javascript/validation.js"></script>
 </body>

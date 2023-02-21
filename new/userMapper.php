@@ -19,7 +19,7 @@ class UserMapper extends Database
         // $statement = $this->conn->prepare($this->query);
         $query->bindParam(":id", $userId);
         $query->execute();
-         $result = $query->fetch();
+         $result = $query->fetch(PDO::FETCH_ASSOC);
         return $result;
     }
 
@@ -42,16 +42,31 @@ class UserMapper extends Database
         // $statement = $this->conn->prepare($this->query);
         $query->bindParam(":username", $username);
         $query->execute();
-        $result = $query->fetch();
+        $result = $query->fetch(PDO::FETCH_ASSOC);
         return $result;
     }
+    // public function LogIn($username,$password){
+    //     $query=$this->db->pdo->prepare("SELECT * from user where username=$username");
+    //     $row=mysqli_fetch_assoc($query);
 
+    //     if(mysqli_num_rows($query)>0){
+    //         if($password=$row["password"]){
+    //             alert("Jeni bere log in me sukses!")
+    //         }
+    //         else{
+    //             alert("Password eshte gabim!");
+    //         }
+    //     }
+    //     else{
+    //         alert("Ky username nuk ekziston!");
+    //     }
+    //     }
     public function getAllUsers()
     {
-        $query =$this->db->pdo->query("SELECT * from user");
+        $query =$this->db->pdo->prepare("SELECT * from user");
         // $statement = $this->conn->prepare($this->query);
         $query->execute();
-        $result = $query->fetchAll();
+        $result = $query->fetchAll(PDO::FETCH_ASSOC);
         return $result;
     }
 

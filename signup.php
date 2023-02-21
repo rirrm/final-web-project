@@ -19,7 +19,7 @@ include "header.php";
           </div>
           <div class="center">
             <h1>Create Account</h1>
-            <form class="login_form" action="new/loginVerify.php" method="post" name="form" onsubmit="return validated()">
+            <form class="login_form" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" name="form" onsubmit="return validated()">
                 <div class="txt_field">
                     <input autocomplete="off" type="text" name="register-emailaddress" id="email" required>
                     <span></span>
@@ -45,6 +45,7 @@ include "header.php";
           </div>
        <?php 
     include "footer.php";  
+    include_once 'new/registerController.php';
 ?>
     <script src="javascript/validationsignup.js"></script>
 </body>

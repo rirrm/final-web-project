@@ -1,3 +1,10 @@
+<?php
+if(isset($_GET['error'])){
+  $error = $_GET['error'];
+  echo '<script>alert("'.$error.'")</script>';
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +17,8 @@
 </head>
 
 <?php 
-include "header.php";  
+include "header.php"; 
+
 ?>
     <body>
         <div class="kufiza">
@@ -19,7 +27,7 @@ include "header.php";
           </div>
           <div class="center">
             <h1>Create Account</h1>
-            <form class="login_form" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" name="form" onsubmit="return validated()">
+            <form class="login_form" action="new/registerController.php" method="post" name="form" onsubmit="return validated()">
                 <div class="txt_field">
                     <input autocomplete="off" type="text" name="register-emailaddress" id="email" required>
                     <span></span>
@@ -43,6 +51,7 @@ include "header.php";
           </div>
           
           </div>
+          
        <?php 
     include "footer.php";  
     include_once 'new/registerController.php';

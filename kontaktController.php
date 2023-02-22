@@ -51,7 +51,7 @@ class kontaktController
     // $statement->execute();
     $query->bindParam(":id", $kontaktId);
     $query->execute();
-        return header('Location: views/dashboard.php');
+        return header('Location: dashboard.php');
    }
 }
 ?>

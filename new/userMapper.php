@@ -15,27 +15,14 @@ class UserMapper extends Database
 
     public function getUserByID($userId)
     {
-        $query =$this->db->pdo->query("SELECT * from user where userid=:id");
+        $query = $this->db->pdo->prepare("SELECT * from user where userID=:id");
         // $statement = $this->conn->prepare($this->query);
         $query->bindParam(":id", $userId);
         $query->execute();
          $result = $query->fetch(PDO::FETCH_ASSOC);
         return $result;
     }
-
-    public function edit(\SimpleUser $user, $id)
-    {
-        $query =$this->db->pdo->prepare("UPDATE user set username=:username, email=:email where UserID=:id");
-        var_dump($user);
-        // $statement = $this->conn->prepare($this->query);
-        $email = $user->getEmail();
-        $username = $user->getUsername();
-        $query->bindParam(":email", $email);
-        $query->bindParam(":username", $username);
-        $query->bindParam(":id", $id);
-        $query->execute();
-    }
-
+   
     public function getUserByUsername($username)
     {
         $query =$this->db->pdo->prepare("SELECT * from user where username=:username");
@@ -70,7 +57,25 @@ class UserMapper extends Database
         return $result;
     }
 
-    public function insertUser(\SimpleUser $user)
+    public function getAllSimpleUsers()
+    {
+        $query =$this->db->pdo->prepare("SELECT * from user where role=0");
+        // $statement = $this->conn->prepare($this->query);
+        $query->execute();
+        $result = $query->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+    public function getAllAdmins()
+    {
+        $query =$this->db->pdo->prepare("SELECT * from user where role=1");
+        // $statement = $this->conn->prepare($this->query);
+        $query->execute();
+        $result = $query->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+    public function insertUser(\Person $user)
     {
         $query =$this->db->pdo->prepare("INSERT into user (email, username, userpassword, role) values (:email,:username,:pass,:role)");
         // $statement = $this->conn->prepare($this->query);
@@ -82,6 +87,19 @@ class UserMapper extends Database
         $query->bindParam(":username", $username);
         $query->bindParam(":pass", $pass);
         $query->bindParam(":role", $role);
+        $query->execute();
+    }
+
+    public function edit(\Person $user, $id)
+    {
+        $query =$this->db->pdo->prepare("UPDATE user set username=:username, email=:email where UserID=:id");
+        var_dump($user);
+        // $statement = $this->conn->prepare($this->query);
+        $email = $user->getEmail();
+        $username = $user->getUsername();
+        $query->bindParam(":email", $email);
+        $query->bindParam(":username", $username);
+        $query->bindParam(":id", $id);
         $query->execute();
     }
 

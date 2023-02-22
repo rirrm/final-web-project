@@ -91,19 +91,19 @@
       </tbody>
     </table>
 
-    <h2>User list:</h2>
+    <h2>Simple User list:</h2>
         <table class="content-table">
             <thead>
                 <tr>
-                    <td>Email</td>
-                    <td>Username</td>
-                    <td>Fshij</td>
+                    <th>Email</th>
+                    <th>Username</th>
+                    <th>Fshij</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
                 $mapper = new userMapper();
-                $userList = $mapper->getAllUsers();
+                $userList = $mapper->getAllSimpleUsers();
 
                 foreach ($userList as $user) {
                 ?>
@@ -122,9 +122,9 @@
         <table class="content-table">
             <thead>
                 <tr>
-                    <td>Emri</td>
-                    <td>Mbiemri</td>
-                    <td>Mesazhi</td>
+                    <th>Emri</th>
+                    <th>Mbiemri</th>
+                    <th>Mesazhi</th>
                 </tr>
             </thead>
             <tbody>
@@ -139,6 +139,35 @@
                         <td><?php echo $controllerr['mbiemri']; ?></td>
                         <td><?php echo $controllerr['mesazhi']; ?></td>
                         <td><a href="fshij-kontaktin.php?id=<?php echo $controllerr['Id'];?>">Fshij</td>
+                    </tr>
+                <?php
+                }
+                ?>
+            </tbody>
+        </table>
+        <h2>Admin list:</h2>
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th colspan="2" ><a href="krijo-adminin.php">Krijo Adminin</a></th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $mapper = new userMapper();
+                $adminList = $mapper->getAllAdmins();
+
+                foreach ($adminList as $mapper) {
+                ?>
+                    <tr>
+                        <td><?php echo $mapper['email']; ?></td>
+                        <td><?php echo $mapper['username']; ?></td>
+                        <td><?php echo $mapper['userpassword']; ?></td>
+                        <td><a href="edito-adminin.php?id=<?php echo $mapper['userID'];?>">Edit</a></td>
+                        <td><a href="fshij-adminin.php?id=<?php echo $mapper['userID'];?>">Fshij</td>
                     </tr>
                 <?php
                 }

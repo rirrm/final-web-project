@@ -1,16 +1,28 @@
 <?php
 include_once 'simpleUserClass.php';
+include_once 'adminClass.php';
 require_once 'userMapper.php';
-
+// include_once '../signup.php';
 if (isset($_POST['register-btn'])) {
     $register = new RegisterLogic($_POST);
-    $isValid = $register->validateInput();
-    if($isValid){
-        $register->insertData();
-        return header("Location:../login.php");
-    } else {
-        echo '<script>alert("Invalid input")</script>';
-    }
+    $EmailisValid = $register->validateEmail();
+    $UsernameisValid = $register->validateUsername();
+    $PasswordisValid = $register->validatePassword();
+    if($EmailisValid && $UsernameisValid && $PasswordisValid){
+        // $register->insertData();
+        $message = "Jeni regjistruar me sukses!";
+    header("Location:../login.php?error=".urlencode($message));
+        // return header("Location:../login.php");
+    } else if(!$EmailisValid){
+    $message = "Email është jovalid!";
+    header("Location:../signup.php?error=".urlencode($message));
+}else if(!$UsernameisValid){
+    $message = "Username nuk mund të përmbajë hapësira as karaktere speciale (vetëm . _ - lejohen)!";
+    header("Location:../signup.php?error=".urlencode($message));
+}else if(!$PasswordisValid){
+    $message = "Password duhet të ketë së paku 8 karaktere dhe të përmbajë shkronja të vogla, të mëdha, numra dhe karaktere speciale!";
+    header("Location:../signup.php?error=".urlencode($message));
+}
 }
 
 class RegisterLogic
@@ -26,12 +38,28 @@ class RegisterLogic
         $this->password = $formData['register-password'];
     }
 
-    public function validateInput(){
+    public function validateEmail(){
         $emailRegex = "/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/";
-        $usernameRegex = "/^[a-zA-Z0-9_-]{3,15}$/";
+        
+        if(preg_match($emailRegex, $this->email)){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public function validateUsername(){
+        $usernameRegex = "/^[a-zA-Z0-9._-]{3,15}$/";
+        
+        if(preg_match($usernameRegex, $this->username)){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public function validatePassword(){
         $passwordRegex = "/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/";
         
-        if(preg_match($emailRegex, $this->email) && preg_match($usernameRegex, $this->username) && preg_match($passwordRegex, $this->password)){
+        if(preg_match($passwordRegex, $this->password)){
             return true;
         } else {
             return false;
@@ -46,4 +74,13 @@ class RegisterLogic
         $mapper->insertUser($user);
         header("Location:../index.php");
     }
+
+    public function insertDataAdmin(){
+        $admin = new Admin($this->email, $this->username, $this->password,1);
+
+        $mapper = new UserMapper();
+        $mapper->insertUser($admin);
+        header("Location:../views/dashboard.php");
+    }
+    
 }

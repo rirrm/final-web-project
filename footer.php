@@ -123,4 +123,35 @@
 	color: #f3f3ec;
 	background-color: #f3f3ec;
 }
+
+
+@media only screen and (max-width: 767px) {
+    .footer{
+        height:17cm;
+    }
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    #contact {
+        margin-right: 0;
+    }
+    #socials {
+        margin-left: 0;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    .footer-col {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+/* @media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+} */
     </style>

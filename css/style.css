@@ -293,64 +293,73 @@ h3{
 
 }
 
-@media only screen and (max-width: 844px) {
-    /* hide the navigation menu */
-    #header1 ul {
-      display: none;
-    }
-    /* display the toggle button */
-    .navbar-toggle {
-      display: block;
-    }
-    /* style the toggle button */
-    .navbar-toggle span {
-      display: block;
-      width: 25px;
-      height: 3px;
-      margin: 5px;
-      background-color: #13765b;
-    }
-  
-  
-  /* show the navigation menu when toggle button is clicked */
-  .navbar-toggle.active + #head1 ul {
-    display: flex;
+
+@media only screen and (max-width: 767px) {
+  #fotoPare {
     flex-direction: column;
-    background-color: #f3f3ec;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  /* style the navigation menu for small screens */
-  #head1 ul li {
-    margin: 5px;
-  }
-  
-  /* style the active toggle button */
-  .navbar-toggle.active span {
-    transform: rotate(45deg);
-    background-color: #13765b;
-  }
-  
-  /* restyle the header for small screens */
-  #header1 {
     height: auto;
-    padding: 10px;
-    position: relative;
   }
-  
-  #img1{
-    width: 3.5cm;
-    height: 1.25cm;
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
+  #teksti {
+    width: 100%;
+    height: 6cm;
+    margin-left: 0;
+    padding-top: 0.5cm;
+  }
+  #teksti p {
+    font-size: 28px;
+  }
+  #foto {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  #slideshow {
+    width: 100%;
+    margin: 20px 0;
+    height: 5cm;
+  }
+  .katrorat {
+    height: 6cm;
+  }
+  .divs {
+    width: 100%;
+    height: 200px;
+    margin: 10px 0;
+  }
+  .r {
+    height: 200px;
+    width: 100%;
+  }
+  #fotoFundit {
+    flex-direction: column;
+    height: auto;
+  }
+  #img {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    border-radius: 0;
+  }
+  #fotoFunditTxt {
+    width: 100%;
+    margin: 20px 0;
+    padding: 15px;
+    font-size: 16px;
+    text-align: left;
+  }
+  #fotoFunditTxt h1{
+  width: 85%;
+  }
+  #fotoFunditTxt p{
+    width: 87%;
+  }
+  /* #btn1{
+    width: ;
+  } */
+  #btn2 {
+    width: 90%;
   }
 }
+
 /* 
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');

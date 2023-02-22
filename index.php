@@ -10,7 +10,7 @@
 </head>
 <body>
 <?php 
-    // include "header.php";
+    include "header.php";
     
 ?>
     <main>
@@ -96,7 +96,7 @@
         </div>
     </main>
    <?php 
-    // include "footer.php";  
+    include "footer.php";  
 ?>
 <script src="javascript/script.js"></script>
 </body>

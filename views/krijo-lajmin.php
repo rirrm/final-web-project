@@ -1,5 +1,7 @@
 <?php 
     require_once '../LajmiController.php';
+    
+
 
     $lajmi = new LajmiController;
     if(isset($_POST['Submit'])){

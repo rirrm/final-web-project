@@ -9,7 +9,7 @@ if (isset($_POST['register-btn'])) {
     $UsernameisValid = $register->validateUsername();
     $PasswordisValid = $register->validatePassword();
     if($EmailisValid && $UsernameisValid && $PasswordisValid){
-        // $register->insertData();
+        $register->insertData();
         $message = "Jeni regjistruar me sukses!";
     header("Location:../login.php?error=".urlencode($message));
         // return header("Location:../login.php");

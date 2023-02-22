@@ -297,7 +297,7 @@ h3{
 @media only screen and (max-width: 767px) {
   #fotoPare {
     flex-direction: column;
-    height: auto;
+    height: 16;
   }
   #teksti {
     width: 100%;
@@ -311,6 +311,7 @@ h3{
   #foto {
     margin-left: 0;
     margin-bottom: 30px;
+    height: 10cm;
   }
   #slideshow {
     width: 100%;

@@ -1,5 +1,5 @@
 <?php
-require_once "../config/database.php";
+require_once __DIR__ . "/../config/database.php";
 
 class UserMapper extends Database
 {
@@ -32,6 +32,8 @@ class UserMapper extends Database
         $result = $query->fetch(PDO::FETCH_ASSOC);
         return $result;
     }
+
+    
     // public function LogIn($username,$password){
     //     $query=$this->db->pdo->prepare("SELECT * from user where username=$username");
     //     $row=mysqli_fetch_assoc($query);
@@ -111,4 +113,30 @@ class UserMapper extends Database
         $query->execute();
         return header('Location: ../views/dashboard.php');
     }
+
+    public function countUsers()
+    {
+        $stmt = $this->db->pdo->prepare('SELECT COUNT(*) FROM user');
+        $stmt->execute();
+        return $stmt->fetchColumn();
+    }
+
+    public function emailExists($email)
+    {
+        $stmt = $this->db->pdo->prepare("SELECT COUNT(*) FROM user WHERE email = ?");
+        $stmt->execute([$email]);
+
+        return $stmt->fetchColumn() > 0;
+    }
+
+    
+    public function usernameExists($username)
+    {
+
+        $stmt = $this->db->pdo->prepare("SELECT COUNT(*) FROM user WHERE username = ?");
+        $stmt->execute([$username]);
+
+        return $stmt->fetchColumn() > 0;
+    }
+    
 }

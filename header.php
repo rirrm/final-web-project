@@ -49,7 +49,9 @@ session_start();
         </div>
         <div id="head2">
             <ul>
-                <?php if (isset($_SESSION['loggedin'])) { // If user is logged in, show logout button
+                <?php 
+                
+                if (isset($_SESSION['loggedin'])) { 
                     
                     echo '<li><a href="new/logout.php" class="hovernav">Log Out</a></li>';
                     

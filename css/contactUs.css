@@ -114,3 +114,38 @@ outline: none;
     background-color:#13765b;
     color:white;
     }
+
+    textarea{
+        max-width:  400px;
+         min-width: 400px;
+         max-height: 170px;
+         min-height: 170px;
+
+    }
+
+    @media only screen and (max-width: 768px) {
+        .kufiza {
+        margin-top: 200px;
+        width: 80%;
+        margin: 50px 5%;
+        padding: 30px;
+        margin-top: 170px;
+        }
+        
+        .center {
+        width: 90%;
+        }
+        
+        .center h1 {
+        font-size: 24px;
+        padding: 10px 0;
+        }
+        
+        .center form {
+        padding: 0 20px;
+        }
+        textarea{
+        max-width:  300px;
+        min-width: 300px;
+        }
+        }

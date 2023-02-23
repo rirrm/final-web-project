@@ -62,7 +62,7 @@ a{
 #img1{
     width: 3.5cm;
     height: 1.25cm;
-    padding-right: 8.0cm;
+    padding-right: 8cm;
 }
 #header1{
     align-items:center;
@@ -87,6 +87,8 @@ a{
 #head2 ul li{
     margin-right: 50px;
 }
+
+
 
 .nav ul li a:hover{
     color: rgba(19, 117, 58, 0.911);
@@ -116,4 +118,53 @@ a{
     transform: scaleX(1);
     transform-origin: bottom left;
 }
+
+@media screen and (max-width: 768px) {
+  #header1 {
+    flex-wrap: wrap;
+    height: auto;
+  }
+  
+  #img1 {
+    width: 100%;
+    max-width: 150px;
+    margin: 0px auto;
+    padding-left: 5cm;
+    order: 1;
+    margin-bottom: -20px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  #head1 {
+    justify-content: center;
+    width: 100%;
+    order: 2;
+    margin-bottom: -30px;
+  }
+  #head1 ul{
+    justify-content: center;
+  }
+  
+  #head2 {
+    width: 100%;
+    order: 3;
+    text-align: center;
+  }
+  
+  #head2 ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2px;
+  }
+  
+  #header1 ul li {
+    margin: 0 10px;
+  }
+}
+
+
+
+
 </style>

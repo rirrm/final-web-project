@@ -125,13 +125,16 @@
 }
 
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
     .footer{
-        height:17cm;
+        height:auto;
     }
     .footer-col {
         width: 50%;
         margin-bottom: 30px;
+    }
+    .row{
+        margin-left: -100px;
     }
     #contact {
         margin-right: 0;
@@ -141,11 +144,4 @@
     }
 }
 
-
-
- @media(max-width: 767px){
-    .footer{
-        height: auto;
-    }
-} 
     </style>

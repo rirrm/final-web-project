@@ -1,7 +1,9 @@
 <?php
 include_once 'new/adminClass.php';
 include_once 'new/simpleUserClass.php';
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+  session_start();
+}
 ?>
 
 <head>

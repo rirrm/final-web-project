@@ -10,10 +10,11 @@ if (isset($_POST['login-btn'])) {
 
     if($usernameExists){
             if($passwordVerify){
-                $message = "Jeni bere log in me sukses!";
-                header("Location:../login.php?error=".urlencode($message));
-           }else{
-                $message = "Password Gabim!";
+                    $message = "Jeni bërë log in me sukses!";
+                    header("Location:../index.php?error=".urlencode($message)); 
+                }
+                else{
+                $message = "Password është gabim!";
                 header("Location:../login.php?error=".urlencode($message));
             }
         }
@@ -54,8 +55,7 @@ class LoginLogic{
     {
         $mapper = new UserMapper();
         $user = $mapper->getUserByUsername($this->username);
-        if (password_verify($password, $user['userpassword'])) {
-            
+        if (password_verify($this->password, $user['userpassword'])) {
             if ($user['role'] == 1) {
                 $obj = new Admin($user['userID'], $user['username'], $user['userpassword'], $user['role']);
                 $obj->setSession();
@@ -68,8 +68,4 @@ class LoginLogic{
             
         } else return false;
     }
-
-    
-}
-
-
+}  

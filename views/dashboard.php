@@ -97,6 +97,7 @@
                 <tr>
                     <th>Email</th>
                     <th>Username</th>
+                    <th>Beje Admin</th>
                     <th>Fshij</th>
                 </tr>
             </thead>
@@ -110,6 +111,7 @@
                     <tr>
                         <td><?php echo $user['email']; ?></td>
                         <td><?php echo $user['username']; ?></td>
+                        <td><a href="beje-admin.php?id=<?php echo $user['userID'];?>">Beje Admin</td>
                         <td><a href="fshij-userin.php?id=<?php echo $user['userID'];?>">Fshij</td>
                     </tr>
                 <?php

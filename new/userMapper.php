@@ -94,16 +94,24 @@ class UserMapper extends Database
 
     public function edit(\Person $user, $id)
     {
-        $query =$this->db->pdo->prepare("UPDATE user set username=:username, email=:email where UserID=:id");
+        $query =$this->db->pdo->prepare("UPDATE user set username=:username, email=:email, userpassword=:userpassword where UserID=:id");
         var_dump($user);
         // $statement = $this->conn->prepare($this->query);
         $email = $user->getEmail();
         $username = $user->getUsername();
+        $userpassword = password_hash($user->getPassword(), PASSWORD_BCRYPT);
         $query->bindParam(":email", $email);
         $query->bindParam(":username", $username);
+        $query->bindParam(":userpassword", $userpassword);
         $query->bindParam(":id", $id);
         $query->execute();
     }
+
+    public function makeUserAdmin($userID) {
+        $query =$this->db->pdo->prepare("UPDATE user SET role = 1 WHERE userID = :userID");
+        $query->bindParam(':userID', $userID);
+        $query->execute();
+      }
 
     public function deleteUser($userId)
     {

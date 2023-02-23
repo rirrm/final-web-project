@@ -1,19 +1,10 @@
 <?php 
     require_once '../ProdController.php';
-    require_once '../produkti.php';
 
-
-    $produkti = new Produkti($_POST['pershkrimi'], $_POST['foto'], $_POST['cmimi']);
-
-    $produktiController = new ProdController;
+    $produkti = new ProdController;
     if(isset($_POST['Submit'])){
-        $produktiController->insert($produkti);
+        $produkti->insert($_POST);
     }
-
-    // $produkti = new ProdController;
-    // if(isset($_POST['Submit'])){
-    //     $produkti->insert($_POST);
-    // }
 
 ?>
 
@@ -37,6 +28,7 @@
 </div>
 </div>
 </div>
+
 
 
 <style>

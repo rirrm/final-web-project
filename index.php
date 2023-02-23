@@ -33,33 +33,7 @@
         
         </div>
 
-<!-- 
-        <div>
-            <h1 id="rec">Arritjet e reja</h1>
-            <div class="wr">
-                <div class="divs"><a href="products.php">
-                <img src="images/rice-arabutin.jpg" class="r">
-                <p class="tekstet">Beauty of Joseon GLOW DEEP SERUM RICE + ALPHA ARBUTIN </p>
-                </a>
-            </div>
-            <div class="divs"><a href="products.php">
-                <img src="images/CLEANSING-BAR.jpg" class="r">
-                <p class="tekstet">SOME BY MI AHA-BHA-PHA 30 DAYS MIRACLE CLEANSING BAR</p>
-                </a>
-            </div>
-            <div class="divs"><a href="products.php">
-                <img src="images/laneigehome.png" class="r">
-                <p class="tekstet">LIP SLEEPING MASK (MINT CHOCO)</p>
-                </a>
-            </div>
-            <div class="divs"><a href="products.php">
-                <img src="images/pomegrenate.jpg" class="r">
-                <p class="tekstet">Missha Air Fit Sheet Mask Poemgranate</p>
-                </a>
-                </a>
-            </div>
-        </div>
-        </div> -->
+
 <?php
     require_once 'homeController.php';
 

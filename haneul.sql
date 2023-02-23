@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 21, 2023 at 10:06 PM
+-- Generation Time: Feb 23, 2023 at 02:57 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -33,6 +33,16 @@ CREATE TABLE `home` (
   `home_emri` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `home`
+--
+
+INSERT INTO `home` (`Id`, `home_image`, `home_emri`) VALUES
+(1, './images/laneigehome.png', 'LIP SLEEPING MASK (MINT CHOCO)'),
+(2, './images/rice-arabutin.jpg', 'Beauty of Joseon GLOW DEEP SERUM RICE + ALPHA ARBUTIN'),
+(3, './images/CLEANSING-BAR.jpg', 'SOME BY MI AHA-BHA-PHA 30 DAYS MIRACLE CLEANSING BAR'),
+(4, './images/pomegrenate.jpg', 'Missha Air Fit Sheet Mask Pomegranate');
+
 -- --------------------------------------------------------
 
 --
@@ -52,7 +62,8 @@ CREATE TABLE `kontakti` (
 
 INSERT INTO `kontakti` (`Id`, `emri`, `mbiemri`, `mesazhi`) VALUES
 (1, 'r', 'r', 'r'),
-(2, 'r', 'r', 'r');
+(2, 'r', 'r', 'r'),
+(3, 'rita', 'mala', 'ritrita');
 
 -- --------------------------------------------------------
 
@@ -64,7 +75,7 @@ CREATE TABLE `lajmi` (
   `Id` int(11) NOT NULL,
   `lajmi_titulli` varchar(255) NOT NULL,
   `lajmi_foto` varchar(255) NOT NULL,
-  `lajmi_pershkrimi` varchar(255) NOT NULL
+  `lajmi_pershkrimi` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -72,7 +83,8 @@ CREATE TABLE `lajmi` (
 --
 
 INSERT INTO `lajmi` (`Id`, `lajmi_titulli`, `lajmi_foto`, `lajmi_pershkrimi`) VALUES
-(1, 'refav', './images/17.jpg', 'evar');
+(5, 'Lokacioni më i ri', './images/Pristina-Mall.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut saepe quo necessitatibus ratione, hic unde eligendi quasi sint, corporis, nihil libero culpa laudantium sunt quod earum dolore harum quam! Esse?'),
+(6, 'Një udhëzues për t\'u kujdesur për lëkurën tuaj', './images/Hailey-About-BW_2000x.jpg', '1. Pastrimi: Zgjidhni një pastrues që nuk e lë lëkurën tuaj të shtrënguar pas larjes. Pastroni fytyrën tuaj jo më shumë se dy herë në ditë, ose vetëm një herë, nëse keni lëkurë të thatë dhe nuk përdorni grim.  2. Serumet: Një serum me vitaminë C ose faktorë rritjeje ose peptide do të ishte më mirë në mëngjes, nën kremrat e diellit. Natën, retinoli ose retinoidet me recetë funksionojnë më mirë.  3. Hidratues: Edhe lëkura e yndyrshme ka nevojë për hidratues, por përdorni një që është i lehtë, me bazë xhel ose që nuk bllokon poret tuaja. Lëkura e thatë mund të përfitojë nga më shumë hidratues me bazë kremi.  4. Krem kundër diellit: Aplikoni krem kundër diellit me të paktën 30 SPF 15 minuta përpara se të dilni jashtë, pasi duhet pak kohë që kremi kundër diellit të aktivizohet. Tonet e errëta të lëkurës në fakt kanë nevojë për më shumë mbrojtje nga dielli sepse hiperpigmentimi është më i vështirë për t\'u korrigjuar.');
 
 -- --------------------------------------------------------
 
@@ -86,6 +98,40 @@ CREATE TABLE `produkti` (
   `prod_foto` varchar(255) NOT NULL,
   `prod_cmimi` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `produkti`
+--
+
+INSERT INTO `produkti` (`Id`, `prod_pershkrimi`, `prod_foto`, `prod_cmimi`) VALUES
+(3, 'Beauty of Joseon Glow Serum Proplis & Niacinamide', './images/1.jpg', '19.99'),
+(4, 'Beauty of Joseon Relief Sun Rice + Probiotics 50ml', './images/2.jpg', '20.00'),
+(5, 'MISSHA Airy Fit Sheet Mask', './images/3.jpg', '2.80'),
+(6, 'Missha Perfect Cover BB Cream', './images/4.jpg', '15.00'),
+(7, 'Beauty of Joseon GLOW DEEP SERUM RICE + ALPHA ARBUTIN', './images/5.jpg', '17.59'),
+(8, 'ALOE REAL COOL SOOTHING GEL', './images/6.jpeg', '6.75'),
+(9, 'JEJU Volcanic Scoria Konjac Sponge', './images/7.jpg', '6.30'),
+(10, 'LIP SLEEPING MASK (MINT CHOCO)', './images/8.jpg', '17.00'),
+(11, 'Missha All-around Safe Block Soft Finish Sun Milk', './images/9.jpg', '22.50'),
+(12, 'ACNE PIMPLE MASTER PATCH 24pcs', './images/10.jpg', '6.00'),
+(13, 'Laneige Lip Sleeping Mask EX Grapefruit 20gr', './images/11.jpeg', '20.00'),
+(14, 'MISSHA Mascure Moisture Solution Sheet Mask Ceramide', './images/12.jpg', '3.50'),
+(15, 'CARMEX CLASSIC JAR', './images/13.jpg', '3.00'),
+(16, 'Missha All Around Safe Block Daily Sun SPF50+ PA++++ 50ml', './images/14.jpg', '14.50'),
+(17, 'CARMEX PREMIUM LIME STICK SPF 15', './images/15.jpg', '2.56'),
+(18, 'Missha Air Fit Sheet Mask Pomegranate', './images/16.jpg', '2.80'),
+(19, 'COSRX LOW PH GOOD MORNING CLEANSER', './images/17.jpg', '14.00'),
+(20, 'COSRX Aloe Soothing Sun Cream Spf 50+ Pa+++ 50ml', './images/18.jpg', '15.50'),
+(21, 'Fermented Complex 94 Boosting Essence', './images/19.jpg', '24.50'),
+(22, 'Beauty of Joseon Dynasty Cream', './images/20.jpg', '21.99'),
+(23, 'BENTON SNAIL BEE HIGH CONTENT MASK PACK', './images/21.jpg', '2.62'),
+(24, 'SHEA BUTTER & COCONUT BODY LOTION', './images/22.jpg', '24.00'),
+(25, 'SOME BY MI AHA-BHA-PHA 30 DAYS MIRACLE CLEANSING BAR', './images/23.jpg', '13.00'),
+(26, 'Etude House My Beauty Tool Pimple Popper', './images/24.jpg', '6.00'),
+(27, 'ETUDE MY LASH SERUM', './images/25.jpg', '12.50'),
+(28, 'SNAIL BEE HIGH CONTENT SKIN ', './images/26.jpg', '20.00'),
+(29, 'CARMEX PREMIUM VANILLA STICK SPF 15', './images/27.jpg', '3.20'),
+(30, 'Etude Dear Darling Water Gel Tint PK004', './images/28.jpg', '7.50');
 
 -- --------------------------------------------------------
 
@@ -106,7 +152,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`userID`, `email`, `username`, `userpassword`, `role`) VALUES
-(1, 'rita', 'rita', 0x24327924313024445a535a64322f6648506244304a435a36677446702e716568706b6e2e5665754971794b374d646164437049417149676e64753661, 0);
+(4, 'admin1@gmail.com', 'admin', 0x243279243130242e49336a79514d4e51794f77774575512f536753702e5177755138703731737a79484c5a4737456d4668343050306d4245512f7a69, 1),
+(5, 'admin2@gmail.com', 'adminn', 0x24327924313024392f494c64387030664c6876427877435467386b467561574253736751303735385a474c47785a772e31795936474970452f5a796d, 1),
+(6, 'ritamala@gmail.com', 'rita', 0x2432792431302473577a53323675366a5a495637694f6d3849432e2e4f73566c704133673959526b5973686637446f327a7254505a37456e4b73334b, 0);
 
 --
 -- Indexes for dumped tables
@@ -150,31 +198,31 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `home`
 --
 ALTER TABLE `home`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `kontakti`
 --
 ALTER TABLE `kontakti`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `lajmi`
 --
 ALTER TABLE `lajmi`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `produkti`
 --
 ALTER TABLE `produkti`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

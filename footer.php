@@ -4,10 +4,10 @@
                 <div class="footer-col">
                     <h4>Navigo</h4>
                     <ul>
-                        <li><a href="index.html">Faqja Kryesore</a></li>
-                        <li><a href="products.html">Produktet</a></li>
-                        <li><a href="aboutUs.html">Rreth nesh</a></li>
-                        <li><a href="login.html">Kyçu</a></li>
+                        <li><a href="index.php">Faqja Kryesore</a></li>
+                        <li><a href="products.php">Produktet</a></li>
+                        <li><a href="aboutUs.php">Rreth nesh</a></li>
+                        <li><a href="news.php">Lajmet</a></li>
                     </ul>
                 </div>
                 
@@ -142,16 +142,10 @@
 }
 
 
-@media only screen and (max-width: 480px) {
-    .footer-col {
-        width: 100%;
-        margin-bottom: 30px;
+
+ @media(max-width: 767px){
+    .footer{
+        height: auto;
     }
-}
-/* @media(max-width: 767px){
-  .footer-col{
-    width: 50%;
-    margin-bottom: 30px;
-}
-} */
+} 
     </style>

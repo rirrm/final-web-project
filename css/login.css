@@ -133,3 +133,22 @@ text-decoration: none;
 .signup_link a:hover{
 text-decoration: underline;
 }
+
+@media screen and (max-width: 768px) {
+ 
+  .lsimg{
+  width: 100%;
+  height: auto;
+  margin-right: 0;
+  }
+  .kufiza{
+  flex-direction: column-reverse;
+  height: auto;
+  margin-top: 170px;
+  }
+  .center{
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 20px;
+  }
+  }

@@ -229,10 +229,14 @@ h3{
 }
 
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
+  #banner{
+    padding-top: 80px;
+  
+  }
   #fotoPare {
     flex-direction: column;
-    height: 16;
+    height: 17cm;
   }
   #teksti {
     width: 100%;

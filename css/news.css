@@ -50,10 +50,6 @@ a{
     font-size: 20px;
     text-align: center;
 }
-.imgg{
-    width: 100%;
-    height: 300px;
-}
 .img{
     width: 100%;
     height: 500px;
@@ -61,4 +57,45 @@ a{
     margin-left: 100px;
     border-radius: 10px;
     
+}
+
+
+@media only screen and (max-width: 768px) {
+   
+    .aboutUs {
+        width: 85%;
+        margin-left: 2.5%;
+        padding: 30px 30px;
+        height: auto;
+        margin-top: 170px;
+    }
+
+
+.aboutUs2{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #e9e8e4;
+}
+
+
+
+.aboutUs2Txt{
+    width: 100%;
+        margin: 0px;
+        font-size: 16px;
+        padding-bottom: 20px;
+}
+
+.img{
+    width: 100%;
+    height: auto;
+    margin-right: 0px;
+    margin-left: 0px;
+    border-radius: 0px;
+    padding-top: 20px;
+}
 }

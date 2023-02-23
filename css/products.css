@@ -74,7 +74,39 @@ a{
     width:7.5cm;
 }
 
-.zbritja{
-    text-decoration: line-through;
-    color: gray;
-}
+
+@media screen and (max-width: 768px) {
+    #all {
+      margin-left: 0;
+      padding-top: 200px;
+      height: auto;
+    }
+    
+    .rreshti {
+      flex-direction: column;
+      height: auto;
+      font-size: 15px;
+      margin-top: 0;
+      margin-bottom: 1cm;
+    }
+    
+    .p {
+      width: 100%;
+      height: 13cm;
+      margin: 0;
+    }
+    
+    .k {
+      width: 100%;
+    }
+    
+    .blej {
+      width: 60%;
+    }
+    
+    .pershkrimi {
+      width: 100%;
+      height: auto;
+    }
+  }
+  

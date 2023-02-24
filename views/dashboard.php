@@ -181,12 +181,19 @@
 </body>
 <style>
 *{
-  font-family: sans-serif; 
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+body{
+  background-color:#bacbc1;
+}
+div{
+  margin-top:50px;
+}
 .content-table {
   border-collapse: collapse;
-  margin: 25px 0;
+  margin-top:20px;
+  margin-bottom:40px;
   font-size: 0.9em;
   width: 100%;
   border-radius: 5px 5px 0 0;
@@ -200,10 +207,16 @@
   text-align: left;
   font-weight: bold;
 }
-
-.content-table th,
+.content-table th a{
+  color:white;
+}
+.content-table th{
+  background-color: #13765b;
+  padding: 12px 15px;
+}
 .content-table td {
   padding: 12px 15px;
+  background-color: #e9e8e4;
 }
 
 .link{

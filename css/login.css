@@ -41,6 +41,13 @@ border-bottom-left-radius: 10px;
   background-color: #e9e8e4;
   margin-bottom: 100px;
 }
+.errors{
+  height:20x;
+  width:450px;
+  color:red;
+  background-color: rgb(247, 203, 203);
+  margin-left:25px;
+}
 
 
 .center{
@@ -48,7 +55,11 @@ width: 500px;
 background:#e9e8e4;
 border-radius: 10px;
 margin-left: 100px;
-margin-top: 80px;
+margin-top: 50px;
+}
+
+#logincenter{
+  margin-top:90px;
 }
 .center h1{
 text-align: center;

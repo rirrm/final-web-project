@@ -1,8 +1,14 @@
 <?php
-if(isset($_GET['error'])){
-  $error = $_GET['error'];
-  echo '<script>alert("'.$error.'")</script>';
+session_start();
+if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true){
+    header("location: index.php");
+    exit;
 }
+include_once 'new/registerController.php';
+// if(isset($_GET['error'])){
+//   $error = $_GET['error'];
+//   echo '<script>alert("'.$error.'")</script>';
+// }
 ?>
 
 <!DOCTYPE html>
@@ -26,22 +32,36 @@ include "header.php";
               <img src="./images/haileybw.jpg" alt="" class="lsimg">
           </div>
           <div class="center">
+          <div class="errors">
+          <span><?php echo $emailValidErr;?></span>
+          <span> <?php echo $emailExistsErr;?></span>
+          <span> <?php echo $usernameValidErr;?></span>
+          <span><?php echo $UsernameExistsErr;?></span>
+          <span> <?php echo $passwordValid;?></span>
+</div>
             <h1>Create Account</h1>
-            <form class="login_form" action="new/registerController.php" method="post" name="form" onsubmit="return validated()">
+           
+            <form class="login_form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" name="form" onsubmit="return validated()">
                 <div class="txt_field">
                     <input autocomplete="off" type="text" name="register-emailaddress" id="email" required>
                     <span></span>
                     <label for="emailaddress">Email</label>
+                    <!-- <span class="error"><?php echo $emailValidErr;?></span>
+                    <span class="error"> <?php echo $emailExistsErr;?></span> -->
                 </div>
               <div class="txt_field">
                 <input autocomplete="off" type="text" name="register-username" id="user" required>
                 <span></span>
                 <label for="username">Username</label>
+                <!-- <span class="error"> <?php echo $usernameValidErr;?></span>
+                <span class="error"><?php echo $UsernameExistsErr;?></span> -->
               </div>
               <div class="txt_field">
                 <input type="password" name="register-password" id="pass" required>
                 <span></span>
                 <label for="password" >Password</label>
+                <!-- <span class="error"> <?php echo $passwordValid;?></span>
+                <span class="error">* <?php echo $nameErr;?></span> -->
               </div>
               <input type="submit" name="register-btn" value="REGISTER">
               <div class="signup_link">
@@ -54,7 +74,6 @@ include "header.php";
           
        <?php 
     include "footer.php";  
-    include_once 'new/registerController.php';
 ?>
     <script src="javascript/validationsignup.js"></script>
 </body>

@@ -1,112 +1,117 @@
-html, body{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden;
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background: #fff;
-    color:black;
-    font-size: 15px;
-    line-height: 1.5;
-    width: 100%;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color:black;
+  font-size: 15px;
+  line-height: 1.5;
+  width: 100%;
 }
 
-a{
-    color: #262626;
-    text-decoration: none;
+a {
+  color: #262626;
+  text-decoration: none;
 }
 
-#all{
-    display: flex;
-    flex-direction: column;
-    padding-top:100px;
-    height: 102cm;
-    width:100%;
-    margin-left: 110px;
+#all {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  height: auto;
+  width: 100%;
+  margin-left: 110px;
 }
 
-.rreshti{
-    align-items: center;
-    height: 10cm;
-    font-size: 6.5px;
-    display: flex;
-    flex-direction: row;
-    margin-top: 1cm;
-    margin-bottom: 3cm;
+.rreshti {
+  align-items: center;
+  height: auto;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3cm;
 }
 
-.p{
-    height: 9cm;
-    width: 7.5cm;
-    margin: 0.5cm;
-    font-size: 15px;
-    text-align: center;
+.p {
+  height: auto;
+  width: 7.5cm;
+  margin: 0.5cm;
+  font-size: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.k{
-    height: 7.5cm;
-    width: 7.5cm;
+.k {
+  height: 7.5cm;
+  width: 7.5cm;
 }
 
-.blej{
-        margin:10px;
-        margin-left: auto;
-        width: 7.5cm;
-        height:40px;
-        border:0px;
-        background-color:white;
-        border: 3px solid #13765b;
-        font-size:larger;
-        transition: all 0.5s;
-        cursor: pointer;
-        color:#13765b;
-}
-.blej:hover{
-    background-color:#13765b;
-    color:white;
-}
-.pershkrimi{
-    height:70px;
-    width:7.5cm;
+.blej {
+  margin: 10px;
+  margin-left: auto;
+  width: 100%;
+  height: 40px;
+  border: 0px;
+  background-color: white;
+  border: 3px solid #13765b;
+  font-size: larger;
+  transition: all 0.5s;
+  cursor: pointer;
+  color: #13765b;
 }
 
+.blej:hover {
+  background-color: #13765b;
+  color: white;
+}
+
+.pershkrimi {
+  height: 2cm;
+  width: 7.5cm;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 
 @media screen and (max-width: 768px) {
-    #all {
-      margin-left: 0;
-      padding-top: 200px;
-      height: auto;
-    }
-    
-    .rreshti {
-      flex-direction: column;
-      height: auto;
-      font-size: 15px;
-      margin-top: 0;
-      margin-bottom: 1cm;
-    }
-    
-    .p {
-      width: 100%;
-      height: 13cm;
-      margin: 0;
-    }
-    
-    .k {
-      width: 100%;
-    }
-    
-    .blej {
-      width: 60%;
-    }
-    
-    .pershkrimi {
-      width: 100%;
-      height: auto;
-    }
+  #all {
+    margin-left: 0;
+    padding-top: 200px;
+    height: auto;
   }
-  
+
+  .rreshti {
+    flex-direction: column;
+    height: auto;
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 1cm;
+  }
+
+  .p {
+    width: 100%;
+    height: 13cm;
+    margin: 0;
+  }
+
+  .k {
+    width: 100%;
+  }
+
+  .blej {
+    width: 60%;
+  }
+
+  .pershkrimi {
+    width: 100%;
+    height: auto;
+  }
+}

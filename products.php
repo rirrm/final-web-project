@@ -10,12 +10,11 @@
     </head>
     <body>
         <main>
-<?php 
-
-include "header.php"; 
-include "ProdController.php"; 
+        <?php 
+    session_start();
+    include "header.php"; 
+    include "ProdController.php"; 
 ?>
-
 
 <div id="all">
     <?php 
@@ -30,7 +29,15 @@ include "ProdController.php";
             if ($counter % 4 == 0) {
                 echo '<div class="rreshti">';
             }
-            echo '<div class="p"><img src="' . $product["prod_foto"] . '" class="k"><div class="pershkrimi">' . $product["prod_pershkrimi"] . '<br><b>' . $product["prod_cmimi"] . '€</b></div><a href="signup.php"><button class="blej">JOIN THE WAITLIST</button></a></div>';
+            echo '<div class="p">';
+            echo '<div class="prod-info">';
+            echo '<img src="' . $product["prod_foto"] . '" class="k">';
+            echo '<div class="pershkrimi">' . $product["prod_pershkrimi"] . '<br><b>' . $product["prod_cmimi"] . '€</b></div>';
+            echo '</div>';
+            if (!isset($_SESSION['loggedin'])) {
+                echo '<div class="prod-btn"><a href="signup.php"><button class="blej">JOIN THE WAITLIST</button></a></div>';
+            }
+            echo '</div>';
             $counter++;
             if ($counter % 4 == 0) {
                 echo '</div>';
@@ -42,9 +49,8 @@ include "ProdController.php";
         }
     ?>
 </div>
-        </main>
-       <?php 
+
+
+<?php 
     include "footer.php";  
 ?>
-    </body>
-    </html>

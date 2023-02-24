@@ -2,6 +2,7 @@
 include_once 'adminClass.php';
 include_once 'simpleUserClass.php';
 require_once 'userMapper.php';
+$usernameValidErr = $passwordValid="";
 if (isset($_POST['login-btn'])) {
     $login=new LoginLogic($_POST);
     $EmptyFields=$login->emptyFields();
@@ -10,17 +11,16 @@ if (isset($_POST['login-btn'])) {
 
     if($usernameExists){
             if($passwordVerify){
-                    $message = "Jeni bërë log in me sukses!";
-                    header("Location:../index.php?error=".urlencode($message)); 
+                    header("Location:../index.php"); 
                 }
                 else{
-                $message = "Password është gabim!";
-                header("Location:../login.php?error=".urlencode($message));
+                    $passwordValid = "Password është gabim!";
+                // header("Location:../login.php?error=".urlencode($message));
             }
         }
         else{
-            $message = "Username nuk ekziston!";
-            header("Location:../login.php?error=".urlencode($message));
+            $usernameValidErr = "Username nuk ekziston!";
+            // header("Location:../login.php?error=".urlencode($message));
         }
     }
 
@@ -55,7 +55,7 @@ class LoginLogic{
     {
         $mapper = new UserMapper();
         $user = $mapper->getUserByUsername($this->username);
-        if (password_verify($this->password, $user['userpassword'])) {
+        if ($user && password_verify($this->password, $user['userpassword'])) {
             if ($user['role'] == 1) {
                 $obj = new Admin($user['userID'], $user['username'], $user['userpassword'], $user['role']);
                 $obj->setSession();
@@ -65,7 +65,10 @@ class LoginLogic{
             }
             $_SESSION['loggedin'] = true;
             return true;
-            
-        } else return false;
+        } else {
+            return false;
+        }
     }
+    
+    
 }  

@@ -4,6 +4,12 @@
   require_once '../homeController.php';
   include_once '../new/userMapper.php';
   require_once '../kontaktController.php';
+
+  session_start();
+if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && $_SESSION['role'] == 0){
+    header("location: ../index.php");
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

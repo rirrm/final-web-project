@@ -3,7 +3,7 @@ include_once 'simpleUserClass.php';
 include_once 'adminClass.php';
 require_once 'userMapper.php';
 // include_once '../signup.php';
-$emptyErr = $emailValidErr = $emailExistsErr = $usernameValidErr =$UsernameExistsErr = $passwordValid="";
+$emptyErr = $emailValidErr = $emailExistsErr = $usernameValidErr =$UsernameExistsErr = $passwordValid=$success="";
 
 if (isset($_POST['register-btn'])) {
     $register = new RegisterLogic($_POST);
@@ -13,33 +13,34 @@ if (isset($_POST['register-btn'])) {
     $PasswordisValid = $register->validatePassword();
     $EmailExists=$register->emailExists();
     $UsernameExists=$register->usernameExists();
-    if($EmailisValid && $UsernameisValid && $PasswordisValid){
+    if($EmailisValid && $UsernameisValid && $PasswordisValid && !$EmailExists && !$UsernameExists){
         $register->insertData();
-        $message = "Jeni regjistruar me sukses!";
-    header("Location:../login.php?error=".urlencode($message));
+        $success = "Jeni regjistruar me sukses!";
+    // header("Location:../login.php?error=".urlencode($message));
         // return header("Location:../login.php");
+        header("location:login.php");
     } else if($EmptyFields){
-        $message = "Ju lutem plotesoni te gjitha fushat!";
-        header("Location:../signup.php?error=".urlencode($message));
+        $emptyErr = "Ju lutem plotesoni te gjitha fushat!";
+        // header("Location:../signup.php?error=".urlencode($message));
     }
     else if(!$EmailisValid){
-    $message = "Email është jovalid!";
-    header("Location:../signup.php?error=".urlencode($message));
+        $emailValidErr = "Email është jovalid!";
+    // header("Location:../signup.php?error=".urlencode($message));
 }
 else if($EmailExists){
-    $message = "Ky email ekziston!";
-    header("Location:../signup.php?error=".urlencode($message));
+    $emailExistsErr = "Ky email ekziston!";
+    //header("Location:../signup.php?error=".urlencode($message));
 }
 else if($UsernameExists){
-    $message = "Username ekziston!";
-    header("Location:../signup.php?error=".urlencode($message));
+    $UsernameExistsErr = "Username ekziston!";
+   // header("Location:../signup.php?error=".urlencode($message));
 }
 else if(!$UsernameisValid){
-    $message = "Username nuk mund të përmbajë hapësira as karaktere speciale (vetëm . _ - lejohen)!";
-    header("Location:../signup.php?error=".urlencode($message));
+    $usernameValidErr = "Username nuk mund të përmbajë hapësira as karaktere speciale!";
+    //header("Location:../signup.php?error=".urlencode($message));
 }else if(!$PasswordisValid){
-    $message = "Password duhet të ketë së paku 8 karaktere dhe të përmbajë shkronja të vogla, të mëdha, numra dhe karaktere speciale!";
-    header("Location:../signup.php?error=".urlencode($message));
+    $passwordValid= "Password duhet të ketë së paku 8 karaktere dhe të përmbajë shkronja të vogla, të mëdha, numra dhe karaktere speciale!";
+   // header("Location:../signup.php?error=".urlencode($message));
 }
 }
 

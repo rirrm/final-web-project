@@ -4,11 +4,11 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true){
     header("location: index.php");
     exit;
 }
-
-if(isset($_GET['error'])){
-  $error = $_GET['error'];
-  echo '<script>alert("'.$error.'")</script>';
-}
+include "new/loginController.php";
+// if(isset($_GET['error'])){
+//   $error = $_GET['error'];
+//   echo '<script>alert("'.$error.'")</script>';
+// }
 ?>
  <!DOCTYPE html>
 <html lang="en">
@@ -28,9 +28,13 @@ include "header.php";
         <div>
           <img src="./images/haileybw.jpg" alt="" class="lsimg">
       </div>
-        <div class="center">
+        <div class="center" id="logincenter">
+        <div class="errors">
+          <span> <?php echo $usernameValidErr;?></span>
+          <span> <?php echo $passwordValid;?></span>
+</div>
             <h1>Login</h1>
-            <form class="login_form" action="new/loginController.php"method="post" name="form" onsubmit="return validated()">
+            <form class="login_form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" name="form" onsubmit="return validated()">
               <div class="txt_field">
                 <input autocomplete="off" type="text" name="username" id="user" required>
                 <span></span>
@@ -49,8 +53,7 @@ include "header.php";
           </div>
           </div>
        <?php 
-    include "footer.php"; 
-    include "new/loginController.php"; 
+    include "footer.php";  
 ?>
     <script src="javascript/validation.js"></script>
 </body>

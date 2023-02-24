@@ -7,7 +7,7 @@
                         <li><a href="index.php">Faqja Kryesore</a></li>
                         <li><a href="products.php">Produktet</a></li>
                         <li><a href="aboutUs.php">Rreth nesh</a></li>
-                        <li><a href="news.php">Lajmet</a></li>
+                        <li><a href="news.php">Të rejat</a></li>
                     </ul>
                 </div>
                 

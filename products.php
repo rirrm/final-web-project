@@ -30,7 +30,7 @@ include "ProdController.php";
             if ($counter % 4 == 0) {
                 echo '<div class="rreshti">';
             }
-            echo '<div class="p"><img src="' . $product["prod_foto"] . '" class="k"><div class="pershkrimi">' . $product["prod_pershkrimi"] . '<br><b>' . $product["prod_cmimi"] . '€</b></div><a href="login.php"><button class="blej">JOIN THE WAITLIST</button></a></div>';
+            echo '<div class="p"><img src="' . $product["prod_foto"] . '" class="k"><div class="pershkrimi">' . $product["prod_pershkrimi"] . '<br><b>' . $product["prod_cmimi"] . '€</b></div><a href="signup.php"><button class="blej">JOIN THE WAITLIST</button></a></div>';
             $counter++;
             if ($counter % 4 == 0) {
                 echo '</div>';

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 23, 2023 at 02:57 PM
+-- Generation Time: Feb 25, 2023 at 12:25 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -56,15 +56,6 @@ CREATE TABLE `kontakti` (
   `mesazhi` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `kontakti`
---
-
-INSERT INTO `kontakti` (`Id`, `emri`, `mbiemri`, `mesazhi`) VALUES
-(1, 'r', 'r', 'r'),
-(2, 'r', 'r', 'r'),
-(3, 'rita', 'mala', 'ritrita');
-
 -- --------------------------------------------------------
 
 --
@@ -83,8 +74,9 @@ CREATE TABLE `lajmi` (
 --
 
 INSERT INTO `lajmi` (`Id`, `lajmi_titulli`, `lajmi_foto`, `lajmi_pershkrimi`) VALUES
-(5, 'Lokacioni më i ri', './images/Pristina-Mall.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut saepe quo necessitatibus ratione, hic unde eligendi quasi sint, corporis, nihil libero culpa laudantium sunt quod earum dolore harum quam! Esse?'),
-(6, 'Një udhëzues për t\'u kujdesur për lëkurën tuaj', './images/Hailey-About-BW_2000x.jpg', '1. Pastrimi: Zgjidhni një pastrues që nuk e lë lëkurën tuaj të shtrënguar pas larjes. Pastroni fytyrën tuaj jo më shumë se dy herë në ditë, ose vetëm një herë, nëse keni lëkurë të thatë dhe nuk përdorni grim.  2. Serumet: Një serum me vitaminë C ose faktorë rritjeje ose peptide do të ishte më mirë në mëngjes, nën kremrat e diellit. Natën, retinoli ose retinoidet me recetë funksionojnë më mirë.  3. Hidratues: Edhe lëkura e yndyrshme ka nevojë për hidratues, por përdorni një që është i lehtë, me bazë xhel ose që nuk bllokon poret tuaja. Lëkura e thatë mund të përfitojë nga më shumë hidratues me bazë kremi.  4. Krem kundër diellit: Aplikoni krem kundër diellit me të paktën 30 SPF 15 minuta përpara se të dilni jashtë, pasi duhet pak kohë që kremi kundër diellit të aktivizohet. Tonet e errëta të lëkurës në fakt kanë nevojë për më shumë mbrojtje nga dielli sepse hiperpigmentimi është më i vështirë për t\'u korrigjuar.');
+(6, 'Një udhëzues për t\'u kujdesur për lëkurën tuaj', './images/Hailey-About-BW_2000x.jpg', '1. Pastrimi: Zgjidhni një pastrues që nuk e lë lëkurën tuaj të shtrënguar pas larjes. Pastroni fytyrën tuaj jo më shumë se dy herë në ditë, ose vetëm një herë, nëse keni lëkurë të thatë dhe nuk përdorni grim.  2. Serumet: Një serum me vitaminë C ose faktorë rritjeje ose peptide do të ishte më mirë në mëngjes, nën kremrat e diellit. Natën, retinoli ose retinoidet me recetë funksionojnë më mirë.  3. Hidratues: Edhe lëkura e yndyrshme ka nevojë për hidratues, por përdorni një që është i lehtë, me bazë xhel ose që nuk bllokon poret tuaja. Lëkura e thatë mund të përfitojë nga më shumë hidratues me bazë kremi.  4. Krem kundër diellit: Aplikoni krem kundër diellit me të paktën 30 SPF 15 minuta përpara se të dilni jashtë, pasi duhet pak kohë që kremi kundër diellit të aktivizohet. Tonet e errëta të lëkurës në fakt kanë nevojë për më shumë mbrojtje nga dielli sepse hiperpigmentimi është më i vështirë për t\'u korrigjuar.'),
+(8, 'Lokacioni më i ri', './images/Pristina-Mall.jpg', 'Na gjeni tani në pikën më të re në Prishtina Mall. Hapësirë moderne ku mund të ndiheni rehat të bëni zgjidhjen e duhur për lëkurën tuaj. Ju mirëpret stafi i ngrohtë i Haneul !!'),
+(9, 'Si funksionojnë maskat për buzë ?', './images/laneige.webp', 'Ndërsa një balsam buzësh hidraton buzët tuaja, një maskë buzësh ofron një trajtim më intensiv.Formula e maskës së buzëve mund t\'i kthejë buzët tuaja në formë, duke ofruar rezultate qetësuese, të mbushura dhe zbutëse. Dhe, ndryshe nga balsamet e buzëve, rezultatet e maskës së buzëve duhet të zgjasin më gjatë pasi përbërësit e tyre hidratues ofrojnë një dozë më të thellë kujdesi. Kjo gjithashtu do të thotë që nuk keni nevojë të riaplikoni disa herë.Si çdo produkt bukurie, shumëllojshmëria e maskave të buzëve atje është e gjerë. Në përgjithësi, ato janë bërë me përbërës më të trashë se balsamët e buzëve, si gjalpi shea, vaji i kokosit ose vaji jojoba.Ata gjithashtu vijnë në të gjitha format e ndryshme - fletë, pelte ose argjilë, ju emërtoni! Disa maska janë menduar të mbahen për rreth 15 minuta, ndërsa të tjerat vihen në punë gjatë gjithë natë. Mënyra për të kërkuar maskat më të më të mira të buzëve është e thjeshtë: shikoni listën e përbërësve.');
 
 -- --------------------------------------------------------
 
@@ -153,8 +145,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`userID`, `email`, `username`, `userpassword`, `role`) VALUES
 (4, 'admin1@gmail.com', 'admin', 0x243279243130242e49336a79514d4e51794f77774575512f536753702e5177755138703731737a79484c5a4737456d4668343050306d4245512f7a69, 1),
-(5, 'admin2@gmail.com', 'adminn', 0x24327924313024392f494c64387030664c6876427877435467386b467561574253736751303735385a474c47785a772e31795936474970452f5a796d, 1),
-(6, 'ritamala@gmail.com', 'rita', 0x2432792431302473577a53323675366a5a495637694f6d3849432e2e4f73566c704133673959526b5973686637446f327a7254505a37456e4b73334b, 0);
+(5, 'admin2@gmail.com', 'adminn', 0x24327924313024392f494c64387030664c6876427877435467386b467561574253736751303735385a474c47785a772e31795936474970452f5a796d, 1);
 
 --
 -- Indexes for dumped tables
@@ -198,31 +189,31 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `home`
 --
 ALTER TABLE `home`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `kontakti`
 --
 ALTER TABLE `kontakti`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `lajmi`
 --
 ALTER TABLE `lajmi`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `produkti`
 --
 ALTER TABLE `produkti`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

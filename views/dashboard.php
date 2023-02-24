@@ -15,6 +15,7 @@
 </head>
 <body>
   <h1>Dashboard</h1>
+  <h2><a href="../index.php">Kthehu ne ...</a></h2>
   
 <div>
     <table class="content-table">

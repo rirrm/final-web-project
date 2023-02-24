@@ -3,6 +3,8 @@ include_once 'simpleUserClass.php';
 include_once 'adminClass.php';
 require_once 'userMapper.php';
 // include_once '../signup.php';
+$emptyErr = $emailValidErr = $emailExistsErr = $usernameValidErr =$UsernameExistsErr = $passwordValid="";
+
 if (isset($_POST['register-btn'])) {
     $register = new RegisterLogic($_POST);
     $EmptyFields=$register->emptyFields();

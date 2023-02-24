@@ -44,14 +44,21 @@
 <div>
     <h1 id="rec">Arritjet e reja</h1>
     <div class="wr">
-        <?php foreach ($products as $product): ?>
+        <?php 
+            $counter = 0;
+            foreach ($products as $product):
+            if($counter == 4) break;
+                    ?>
         <div class="divs">
             <a href="products.php">
                 <img src="<?php echo $product['home_image']; ?>" class="r">
                 <p class="tekstet"><?php echo $product['home_emri']; ?></p>
             </a>
         </div>
-        <?php endforeach; ?>
+        <?php 
+            $counter++;
+            endforeach; 
+        ?>
     </div>
 </div>
 

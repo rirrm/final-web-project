@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'kontaktController.php';
 
 if (isset($_POST['submit-btn'])) {

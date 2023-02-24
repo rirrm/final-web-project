@@ -47,8 +47,8 @@
         <?php 
             $counter = 0;
             foreach ($products as $product):
-            if($counter == 4) break; // Exit loop after displaying 4 items
-        ?>
+            if($counter == 4) break;
+                    ?>
         <div class="divs">
             <a href="products.php">
                 <img src="<?php echo $product['home_image']; ?>" class="r">

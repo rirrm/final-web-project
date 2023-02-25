@@ -34,7 +34,7 @@ include "header.php";
           <span> <?php echo $passwordValid;?></span>
 </div>
             <h1>Login</h1>
-            <form class="login_form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" name="form" onsubmit="return validated()">
+            <form class="login_form" action="index.php" method="post" name="form" onsubmit="return validated()">
               <div class="txt_field">
                 <input autocomplete="off" type="text" name="username" id="user" required>
                 <span></span>

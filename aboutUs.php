@@ -16,7 +16,7 @@
 
         <div id="aboutUs">
             <div id="aboutUsTxt">
-            <h3>NJË SHKRIM NGA THEMELUESET TONA Klea</h3>
+            <h3>NJË SHKRIM NGA THEMELUESET TONA</h3>
             <p>Udhëtimi ynë drejt një lëkure më të shëndetshme na frymëzoi të zhvillojmë produkte që funksionojnë vërtetë, në një mënyrë që është e arritshme për të gjithë. Haneul është i përkushtuar në bërjen e produkteve të bazuara në shkencë me formulime të shkëlqyera, duke thjeshtuar shumë nga misteret dhe narrativat komplekse pas kujdesit efikas të lëkurës. Shpresojmë se këto do të bëhen gjërat tuaja kryesore që mund të jetojnë në banjën tuaj, të jenë shoqëruesi juaj i preferuar i udhëtimit, të përmirësojnë lëkurën tuaj me kalimin e kohës dhe ta mbajnë lëkurën tuaj të lumtur dhe të hidratuar.</p>
             </div>
         </div>

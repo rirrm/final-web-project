@@ -113,6 +113,12 @@ class UserMapper extends Database
         $query->execute();
       }
 
+      public function makeAdminUser($userID) {
+        $query =$this->db->pdo->prepare("UPDATE user SET role = 0 WHERE userID = :userID");
+        $query->bindParam(':userID', $userID);
+        $query->execute();
+      }
+
     public function deleteUser($userId)
     {
         $query =$this->db->pdo->prepare("DELETE from user where userID=:id");

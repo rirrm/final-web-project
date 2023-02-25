@@ -24,6 +24,48 @@ include_once 'new/registerController.php';
 
 <?php 
 include "header.php"; 
+$emptyErr = $emailValidErr = $emailExistsErr = $usernameValidErr =$UsernameExistsErr = $passwordValid=$success=$email="";
+
+if (isset($_POST['register-btn'])) {
+    $register = new RegisterLogic($_POST);
+    $email=$register->getEmail();
+    $username=$register->getUsername();
+    $EmptyFields=$register->emptyFields();
+    $EmailisValid = $register->validateEmail();
+    $UsernameisValid = $register->validateUsername();
+    $PasswordisValid = $register->validatePassword();
+    $EmailExists=$register->emailExists();
+    $UsernameExists=$register->usernameExists();
+    if(!$EmptyFields && $EmailisValid && $UsernameisValid && $PasswordisValid && !$EmailExists && !$UsernameExists){
+        $register->insertData();
+        $success = "Jeni regjistruar me sukses!";
+    // header("Location:../login.php?error=".urlencode($message));
+        // return header("Location:../login.php");
+        header("location:login.php");
+    } else if($EmptyFields){
+        $emptyErr = "Ju lutem plotesoni te gjitha fushat!";
+        // header("Location:../signup.php?error=".urlencode($message));
+    }
+    else if(!$EmailisValid){
+        $emailValidErr = "Email është jovalid!";
+    // header("Location:../signup.php?error=".urlencode($message));
+}
+else if($EmailExists){
+    $emailExistsErr = "Ky email ekziston!";
+    //header("Location:../signup.php?error=".urlencode($message));
+}
+else if($UsernameExists){
+    $UsernameExistsErr = "Username ekziston!";
+   // header("Location:../signup.php?error=".urlencode($message));
+}
+else if(!$UsernameisValid){
+    $usernameValidErr = "Username nuk mund të përmbajë hapësira as karaktere speciale!";
+    //header("Location:../signup.php?error=".urlencode($message));
+}else if(!$PasswordisValid){
+    $passwordValid= "Password duhet të ketë së paku 8 karaktere dhe të përmbajë shkronja të vogla, të mëdha, numra dhe karaktere speciale!";
+   // header("Location:../signup.php?error=".urlencode($message));
+}
+}
 
 ?>
     <body>
@@ -43,25 +85,22 @@ include "header.php";
            
             <form class="login_form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" name="form" onsubmit="return validated()">
                 <div class="txt_field">
-                    <input autocomplete="off" type="text" name="register-emailaddress" id="email" required>
+                    <input autocomplete="off" type="text" name="register-emailaddress" id="email" required value="<?php echo $email;?>">
                     <span></span>
                     <label for="emailaddress">Email</label>
-                    <!-- <span class="error"><?php echo $emailValidErr;?></span>
-                    <span class="error"> <?php echo $emailExistsErr;?></span> -->
+
                 </div>
               <div class="txt_field">
-                <input autocomplete="off" type="text" name="register-username" id="user" required>
+                <input autocomplete="off" type="text" name="register-username" id="user" required value="<?php echo $username;?>">
                 <span></span>
                 <label for="username">Username</label>
-                <!-- <span class="error"> <?php echo $usernameValidErr;?></span>
-                <span class="error"><?php echo $UsernameExistsErr;?></span> -->
+
               </div>
               <div class="txt_field">
                 <input type="password" name="register-password" id="pass" required>
                 <span></span>
                 <label for="password" >Password</label>
-                <!-- <span class="error"> <?php echo $passwordValid;?></span>
-                <span class="error">* <?php echo $nameErr;?></span> -->
+
               </div>
               <input type="submit" name="register-btn" value="REGISTER">
               <div class="signup_link">
@@ -74,6 +113,7 @@ include "header.php";
           
        <?php 
     include "footer.php";  
+  
 ?>
     <script src="javascript/validationsignup.js"></script>
 </body>

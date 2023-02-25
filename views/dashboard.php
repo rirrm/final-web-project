@@ -4,6 +4,7 @@
   require_once '../homeController.php';
   include_once '../new/userMapper.php';
   require_once '../kontaktController.php';
+  
 
   session_start();
 if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && $_SESSION['role'] == 0){
@@ -20,9 +21,10 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && $_SESSION['
     <title>Document</title>
 </head>
 <body>
+
+  <h2><a id="goback" href="../index.php">Kthehu ne Home</a></h2>
   <h1>Dashboard</h1>
-  <h2><a href="../index.php">Kthehu ne ...</a></h2>
-  
+
 <div>
     <table class="content-table">
         <thead>
@@ -118,8 +120,8 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && $_SESSION['
                     <tr>
                         <td><?php echo $user['email']; ?></td>
                         <td><?php echo $user['username']; ?></td>
-                        <td><a href="beje-admin.php?id=<?php echo $user['userID'];?>">Beje Admin</td>
-                        <td><a href="fshij-userin.php?id=<?php echo $user['userID'];?>">Fshij</td>
+                        <td><a href="beje-admin.php?id=<?php echo $user['userID'];?>">Beje Admin</a></td>
+                        <td><a href="fshij-userin.php?id=<?php echo $user['userID'];?>">Fshij</a></td>
                     </tr>
                 <?php
                 }
@@ -134,6 +136,7 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && $_SESSION['
                     <th>Emri</th>
                     <th>Mbiemri</th>
                     <th>Mesazhi</th>
+                    <th>Fshij</th>
                 </tr>
             </thead>
             <tbody>
@@ -147,7 +150,7 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && $_SESSION['
                         <td><?php echo $controllerr['emri']; ?></td>
                         <td><?php echo $controllerr['mbiemri']; ?></td>
                         <td><?php echo $controllerr['mesazhi']; ?></td>
-                        <td><a href="fshij-kontaktin.php?id=<?php echo $controllerr['Id'];?>">Fshij</td>
+                        <td><a href="fshij-kontaktin.php?id=<?php echo $controllerr['Id'];?>">Fshij</a></td>
                     </tr>
                 <?php
                 }
@@ -161,7 +164,9 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && $_SESSION['
                     <th>Email</th>
                     <th>Username</th>
                     <th>Password</th>
-                    <th colspan="2" ><a href="krijo-adminin.php">Krijo Adminin</a></th>
+                    <th>Beje user</th>
+                    <th colspan="2"><a href="krijo-adminin.php">Krijo Adminin</a></th>
+                    
                 </tr>
             </thead>
             <tbody>
@@ -175,8 +180,9 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && $_SESSION['
                         <td><?php echo $mapper['email']; ?></td>
                         <td><?php echo $mapper['username']; ?></td>
                         <td><?php echo $mapper['userpassword']; ?></td>
+                        <td><a href="beje-user.php?id=<?php echo $mapper['userID'];?>">Beje User</a></td>
                         <td><a href="edito-adminin.php?id=<?php echo $mapper['userID'];?>">Edit</a></td>
-                        <td><a href="fshij-adminin.php?id=<?php echo $mapper['userID'];?>">Fshij</td>
+                        <td><a href="fshij-adminin.php?id=<?php echo $mapper['userID'];?>">Fshij</a></td>
                     </tr>
                 <?php
                 }
@@ -196,6 +202,18 @@ body{
 div{
   margin-top:50px;
 }
+
+h1{
+  color:white;
+  background-color: #13765b;
+  padding:20px;
+}
+
+#goback{
+    color: #262626;
+    text-decoration:none;
+}
+
 .content-table {
   border-collapse: collapse;
   margin-top:20px;

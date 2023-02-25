@@ -21,7 +21,29 @@ include "new/loginController.php";
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <?php 
-include "header.php";  
+include "header.php"; 
+$usernameValidErr = $passwordValid=$username="";
+if (isset($_POST['login-btn'])) {
+    $login=new LoginLogic($_POST);
+    $username=$login->getUsername();
+    $EmptyFields=$login->emptyFields();
+    $usernameExists=$login->usernameExists();
+    $passwordVerify=$login->passwordVerify();
+
+    if($usernameExists){
+            if($passwordVerify){
+                    header("Location:index.php"); 
+                }
+                else{
+                    $passwordValid = "Password është gabim!";
+                // header("Location:../login.php?error=".urlencode($message));
+            }
+        }
+        else{
+            $usernameValidErr = "Username nuk ekziston!";
+            // header("Location:../login.php?error=".urlencode($message));
+        }
+    } 
 ?>
     <body>
       <div class="kufiza">
@@ -34,9 +56,9 @@ include "header.php";
           <span> <?php echo $passwordValid;?></span>
 </div>
             <h1>Login</h1>
-            <form class="login_form" action="index.php" method="post" name="form" onsubmit="return validated()">
+            <form class="login_form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="form" onsubmit="return validated()">
               <div class="txt_field">
-                <input autocomplete="off" type="text" name="username" id="user" required>
+                <input autocomplete="off" type="text" name="username" id="user" required value="<?php echo $username;?>">
                 <span></span>
                 <label for="username">Username</label>
               </div>

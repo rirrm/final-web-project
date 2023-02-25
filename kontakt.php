@@ -1,12 +1,6 @@
 <?php
-session_start();
 require_once 'kontaktController.php';
 
-if (isset($_POST['submit-btn'])) {
-    $kontakt = new Kontakti($_POST);
-    $kontakt->insertData();
-    return header("Location:contactform.php");
-}
 
 class Kontakti
 {
@@ -21,7 +15,13 @@ class Kontakti
         $this->mesazhi = $formData['subject'];
     }
 
-    
+    public function emptyFields(){
+        if(empty($this->emri) || empty($this->mbiemri) || empty($this->mesazhi)){
+            return true;
+        }
+        return false;
+    }
+
     public function getEmri()
     {
         return $this->emri;
@@ -34,6 +34,7 @@ class Kontakti
     {
         return $this->mesazhi;
     }
+
     
     public function insertData()
     {

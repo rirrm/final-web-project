@@ -2,27 +2,7 @@
 include_once 'adminClass.php';
 include_once 'simpleUserClass.php';
 require_once 'userMapper.php';
-$usernameValidErr = $passwordValid="";
-if (isset($_POST['login-btn'])) {
-    $login=new LoginLogic($_POST);
-    $EmptyFields=$login->emptyFields();
-    $usernameExists=$login->usernameExists();
-    $passwordVerify=$login->passwordVerify();
 
-    if($usernameExists){
-            if($passwordVerify){
-                    header("Location:../index.php"); 
-                }
-                else{
-                    $passwordValid = "Password është gabim!";
-                // header("Location:../login.php?error=".urlencode($message));
-            }
-        }
-        else{
-            $usernameValidErr = "Username nuk ekziston!";
-            // header("Location:../login.php?error=".urlencode($message));
-        }
-    }
 
 class LoginLogic{
 
@@ -35,6 +15,11 @@ class LoginLogic{
         $this->password=$formData['password'];
     }
 
+    public function getUsername()
+    {
+        return $this->username;
+    }
+    
     function emptyFields(){
         if(empty($this->username)|| empty($this->password)){
             return true;

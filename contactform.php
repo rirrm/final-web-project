@@ -13,6 +13,21 @@
      
     include "header.php";
     include "kontakt.php";
+    $emptyErr=$emri=$mbiemri=$mesazhi="";
+
+    if (isset($_POST['submit-btn'])) {
+        $kontakt = new Kontakti($_POST);
+        $emri=$kontakt->getEmri();
+        $mbiemri=$kontakt->getMbiemri();
+        $mesazhi=$kontakt->getMesazhi();
+        $emptyFields=$kontakt->emptyFields();
+        if($emptyFields){
+            $emptyErr="Ju lutem plotesoni te gjitha fushat!";
+        }else{
+        $kontakt->insertData();
+        return header("Location:contactform.php");
+        }
+    }
     
 ?>
 
@@ -20,20 +35,25 @@
     <div class="kufiza">
         
         <div class="center">
+        <?php if (!empty($emptyErr)): ?>
+                <div class="errors">
+                    <span><?php echo $emptyErr;?></span>
+                </div>
+            <?php endif; ?>
             <h1>Kontakti</h1>
-            <form class="contact_form" action="kontakt.php" method="post" name="form" onsubmit="return validated()">
+            <form class="contact_form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" name="form" onsubmit="return validated()">
               <div class="txt_field">
-                <input autocomplete="off" type="text" name="emri" id="emri" required>
+                <input autocomplete="off" type="text" name="emri" id="emri" required required value="<?php echo $emri;?>">
                 <span></span>
                 <label for="emri">Emri</label>
               </div>
               <div class="txt_field">
-                <input autocomplete="off" type="text" name="mbiemri" id="mbiemri" required>
+                <input autocomplete="off" type="text" name="mbiemri" id="mbiemri" required required value="<?php echo $mbiemri;?>">
                 <span></span>
                 <label for="mbiemri">Mbiemri</label>
               </div>
                     
-              <textarea id="subject" name="subject" placeholder="Shkruani mesazhin.." rows="10" cols="70"></textarea>
+              <textarea id="subject" name="subject" placeholder="Shkruani mesazhin.." rows="10" cols="70" required value="<?php echo $mesazhi;?>"></textarea>
               <input type="submit" name="submit-btn" value="SEND">
               </div>
             </form>

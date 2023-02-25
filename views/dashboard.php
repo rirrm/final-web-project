@@ -26,6 +26,41 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && $_SESSION['
   <h1>Dashboard</h1>
 
 <div>
+
+        <h2>Lista e admineve</h2>
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Beje user</th>
+                    <th colspan="2"><a href="krijo-adminin.php">Krijo Adminin</a></th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $mapper = new userMapper();
+                $adminList = $mapper->getAllAdmins();
+
+                foreach ($adminList as $mapper) {
+                ?>
+                    <tr>
+                        <td><?php echo $mapper['email']; ?></td>
+                        <td><?php echo $mapper['username']; ?></td>
+                        <td><?php echo $mapper['userpassword']; ?></td>
+                        <td><a href="beje-user.php?id=<?php echo $mapper['userID'];?>">Beje User</a></td>
+                        <td><a href="edito-adminin.php?id=<?php echo $mapper['userID'];?>">Edit</a></td>
+                        <td><a href="fshij-adminin.php?id=<?php echo $mapper['userID'];?>">Fshij</a></td>
+                    </tr>
+                <?php
+                }
+                ?>
+            </tbody>
+        </table>
+
+<h2>Lista e te rejave</h2>
     <table class="content-table">
         <thead>
             <tr>
@@ -52,6 +87,31 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && $_SESSION['
     </table>
     
     
+    <h2>Lista e arritjeve te reja</h2>
+    <table class="content-table">
+        <thead>
+            <tr>
+              <th>Foto e produkuktit</th>
+              <th>Pershkrimi i produktit</th>
+              <th colspan="2" ><a href="krijo-produktinn.php">Krijo Produktin Per Home</a></th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php 
+          $p = new homeController;
+          $allProduktet = $p->readData();
+          foreach($allProduktet as $produkti): ?>
+        <tr>
+          <td><?php echo $produkti['home_image'];?></td>
+          <td><?php echo $produkti['home_emri'];?></td>
+          <td><a href="edito-produktinn.php?id=<?php echo $produkti['Id'];?>">Edit</a></td>
+          <td><a href="fshij-produktinn.php?id=<?php echo $produkti['Id'];?>">Delete</a></td>
+        </tr>  
+        <?php endforeach; ?>
+      </tbody>
+    </table>
+    
+    <h2>Lista e produkteve</h2>
     <table class="content-table">
         <thead>
             <tr>
@@ -77,59 +137,7 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && $_SESSION['
       </tbody>
     </table>
 
-    <table class="content-table">
-        <thead>
-            <tr>
-              <th>Foto e produkuktit</th>
-              <th>Pershkrimi i produktit</th>
-              <th colspan="2" ><a href="krijo-produktinn.php">Krijo Produktin Per Home</a></th>
-            </tr>
-        </thead>
-        <tbody>
-        <?php 
-          $p = new homeController;
-          $allProduktet = $p->readData();
-          foreach($allProduktet as $produkti): ?>
-        <tr>
-          <td><?php echo $produkti['home_image'];?></td>
-          <td><?php echo $produkti['home_emri'];?></td>
-          <td><a href="edito-produktinn.php?id=<?php echo $produkti['Id'];?>">Edit</a></td>
-          <td><a href="fshij-produktinn.php?id=<?php echo $produkti['Id'];?>">Delete</a></td>
-        </tr>  
-        <?php endforeach; ?>
-      </tbody>
-    </table>
-
-    <h2>Simple User list:</h2>
-        <table class="content-table">
-            <thead>
-                <tr>
-                    <th>Email</th>
-                    <th>Username</th>
-                    <th>Beje Admin</th>
-                    <th>Fshij</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                $mapper = new userMapper();
-                $userList = $mapper->getAllSimpleUsers();
-
-                foreach ($userList as $user) {
-                ?>
-                    <tr>
-                        <td><?php echo $user['email']; ?></td>
-                        <td><?php echo $user['username']; ?></td>
-                        <td><a href="beje-admin.php?id=<?php echo $user['userID'];?>">Beje Admin</a></td>
-                        <td><a href="fshij-userin.php?id=<?php echo $user['userID'];?>">Fshij</a></td>
-                    </tr>
-                <?php
-                }
-                ?>
-            </tbody>
-        </table>
-
-        <h2>Message list:</h2>
+    <h2>Lista e kontakteve</h2>
         <table class="content-table">
             <thead>
                 <tr>
@@ -157,32 +165,29 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && $_SESSION['
                 ?>
             </tbody>
         </table>
-        <h2>Admin list:</h2>
+
+    <h2>Lista e perdorueseve</h2>
         <table class="content-table">
             <thead>
                 <tr>
                     <th>Email</th>
                     <th>Username</th>
-                    <th>Password</th>
-                    <th>Beje user</th>
-                    <th colspan="2"><a href="krijo-adminin.php">Krijo Adminin</a></th>
-                    
+                    <th>Beje Admin</th>
+                    <th>Fshij</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
                 $mapper = new userMapper();
-                $adminList = $mapper->getAllAdmins();
+                $userList = $mapper->getAllSimpleUsers();
 
-                foreach ($adminList as $mapper) {
+                foreach ($userList as $user) {
                 ?>
                     <tr>
-                        <td><?php echo $mapper['email']; ?></td>
-                        <td><?php echo $mapper['username']; ?></td>
-                        <td><?php echo $mapper['userpassword']; ?></td>
-                        <td><a href="beje-user.php?id=<?php echo $mapper['userID'];?>">Beje User</a></td>
-                        <td><a href="edito-adminin.php?id=<?php echo $mapper['userID'];?>">Edit</a></td>
-                        <td><a href="fshij-adminin.php?id=<?php echo $mapper['userID'];?>">Fshij</a></td>
+                        <td><?php echo $user['email']; ?></td>
+                        <td><?php echo $user['username']; ?></td>
+                        <td><a href="beje-admin.php?id=<?php echo $user['userID'];?>">Beje Admin</a></td>
+                        <td><a href="fshij-userin.php?id=<?php echo $user['userID'];?>">Fshij</a></td>
                     </tr>
                 <?php
                 }

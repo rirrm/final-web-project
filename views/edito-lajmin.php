@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="../css/crud.css">
 </head>
 <body>
-<h2><a href="dashboard.php">Kthehu ne Dashboard</a><h2>
+<h2><a href="dashboard.php">Kthehu ne Dashboard</a></h2>
 <div class="kufiza">
 <div class="center">
     <h1>Edito lajmin</h1>
@@ -33,7 +33,6 @@
         <span></span>
         <label for="titulli">Titulli</label>
         </div>
-        
         <div class="txt_field">
         <input type="file" name="foto" value="<?php echo $currentLajm['lajmi_foto'];?>">
         <span></span>

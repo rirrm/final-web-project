@@ -8,67 +8,36 @@
 
 ?>
 
-<div id="produktet">
-    <div id="produktibox">
 
-    <div class="produkti">
-<div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/crud.css">
+</head>
+<body>
+<h2><a href="dashboard.php">Kthehu ne Dashboard</a></h2>
+<div class="kufiza">
+<div class="center" id="pr">
+    <h1>Krijo produktin</h1>
     <form method="POST"> 
-        Pershkrimi:
-        <textarea name="pershkrimi"cols="30" rows="10"></textarea>
-        <br>
-        Foto:
+    <textarea name="pershkrimi" rows="10" cols="70" placeholder="Shkruani pershkrimin..."class="ph"></textarea>
+        
+    <div class="txt_field">
         <input type="file" name="foto">
-        <br>
-        Cmimi:
+        <span></span>
+        </div>
+        <div class="txt_field">
         <input type="text" name="cmimi">
-        <br>
+        <span></span>
+        <label for="cmimi">Cmimi</label>
+        </div>
         <input type="Submit" name="Submit" value="Save">
     </form>
 </div>
 </div>
-</div>
 
 
 
-<style>
-    
-.ph{
-  height:300px;
-  width:300px;
-  background-color: #0b5d47;
-  margin-top: 30px;
-  margin-left: 25px;
-}
-
-.produkti{
-    height:500px;
-    width:350px;
-    background-color: #fff;
-    justify-content: space-between;
-}
-
-#produktibox{
-    height:500px;
-    width:33.3cm;
-    display:flex;
-    flex-direction:initial;
-    align-items: center;
-    justify-content: space-around;
-   
-}
-
-#produktet{
-    margin-top:70px;
-    background-color: #e9e8e4;
-    width: 83%;
-    margin-left: 5%;
-    height: 500px;
-    text-align: center;
-    border-radius: 10px;
-    padding: 50px 50px;
-    margin-bottom:100px;
-}
-
-
-    </style>

@@ -53,7 +53,7 @@
                 <label for="mbiemri">Mbiemri</label>
               </div>
                     
-              <textarea id="subject" name="subject" placeholder="Shkruani mesazhin.." rows="10" cols="70" required value="<?php echo $mesazhi;?>"></textarea>
+              <textarea id="subject" name="subject" placeholder="Shkruani mesazhin..." rows="10" cols="70" required value="<?php echo $mesazhi;?>"></textarea>
               <input type="submit" name="submit-btn" value="SEND">
               </div>
             </form>

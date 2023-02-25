@@ -22,11 +22,19 @@ a{
     text-decoration:none;
 }
 
+#cntr{
+    margin-top:-35px;
+  }
+
+  #pr{
+    margin-top:-40px;
+  }
+
 .kufiza{
     background-color: #e9e8e4;
     width: 83%;
     height: 500px;
-    margin: 40px 5%;
+    margin: 30px 5%;
     text-align: center;
     border-radius: 10px;
     padding: 50px 50px;

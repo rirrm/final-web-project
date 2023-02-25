@@ -22,11 +22,10 @@
     <link rel="stylesheet" href="../css/crud.css">
 </head>
 <body>
-<h2><a href="dashboard.php">Kthehu ne Dashboard</a><h2>
+<h2><a href="dashboard.php">Kthehu ne Dashboard</a></h2>
 <div class="kufiza">
 <div class="center">
     <h1>Edito produktin</h1>
-    <form method="post"> 
     <form method="POST"> 
     <div class="txt_field">
         <input type="text" name="pershkrimi" value="<?php echo $currentProd['prod_pershkrimi'];?>">

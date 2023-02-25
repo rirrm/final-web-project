@@ -24,7 +24,7 @@ include_once 'new/registerController.php';
 
 <?php 
 include "header.php"; 
-$emptyErr = $emailValidErr = $emailExistsErr = $usernameValidErr =$UsernameExistsErr = $passwordValid=$success=$email="";
+$emptyErr = $emailValidErr = $emailExistsErr = $usernameValidErr =$UsernameExistsErr = $passwordValid=$success=$email=$username="";
 
 if (isset($_POST['register-btn'])) {
     $register = new RegisterLogic($_POST);

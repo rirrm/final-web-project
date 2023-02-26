@@ -22,6 +22,16 @@ class Kontakti
         return false;
     }
 
+    public function validateEmriMbiemri(){
+        $emriRegex = "/^[A-Za-z]+$/";
+        
+        if(preg_match($emriRegex, $this->emri) && preg_match($emriRegex, $this->mbiemri)){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public function getEmri()
     {
         return $this->emri;

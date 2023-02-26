@@ -13,7 +13,7 @@
      
     include "header.php";
     include "kontakt.php";
-    $emptyErr=$emri=$mbiemri=$mesazhi="";
+    $emptyErr=$emri=$mbiemri=$mesazhi=$emvalidateErr="";
 
     if (isset($_POST['submit-btn'])) {
         $kontakt = new Kontakti($_POST);
@@ -21,9 +21,13 @@
         $mbiemri=$kontakt->getMbiemri();
         $mesazhi=$kontakt->getMesazhi();
         $emptyFields=$kontakt->emptyFields();
+        $emValidate=$kontakt->validateEmriMbiemri();
         if($emptyFields){
             $emptyErr="Ju lutem plotesoni te gjitha fushat!";
-        }else{
+        }else if(!$emValidate){
+          $emvalidateErr="Emri dhe mbiemri jovalid!";
+        }
+        else{
         $kontakt->insertData();
         return header("Location:contactform.php");
         }
@@ -35,9 +39,10 @@
     <div class="kufiza">
         
         <div class="center">
-        <?php if (!empty($emptyErr)): ?>
+        <?php if (!empty($emptyErr) || !empty($emvalidateErr)): ?>
                 <div class="errors">
                     <span><?php echo $emptyErr;?></span>
+                    <span><?php echo $emvalidateErr;?></span>
                 </div>
             <?php endif; ?>
             <h1>Kontakti</h1>

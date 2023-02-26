@@ -1,6 +1,12 @@
 <?php 
     require_once '../homeController.php';
 
+    session_start();
+    if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && $_SESSION['role'] == 0){
+        header("location: ../index.php");
+        exit;
+    }
+
     $prod = new homeController;
     if(isset($_GET['id'])){
         $prodId = $_GET['id'];

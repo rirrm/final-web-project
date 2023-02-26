@@ -1,6 +1,12 @@
 <?php 
     require_once '../LajmiController.php';
 
+    session_start();
+    if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && $_SESSION['role'] == 0){
+        header("location: ../index.php");
+        exit;
+    }
+
     $lajmi = new LajmiController;
     if(isset($_GET['id'])){
         $lajmiId = $_GET['id'];

@@ -1,5 +1,5 @@
 <?php 
-    require_once '../new/userMapper.php';
+    require_once '../user/userMapper.php';
 
     if(isset($_GET['id'])){
         $adminId = $_GET['id'];

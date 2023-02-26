@@ -63,6 +63,6 @@
    <?php 
     include "footer.php";  
 ?>
-   <!-- <script src="/javascript/contactform.js"></script> -->
+   <script src="/javascript/contactform.js"></script>
 </body>
 </html>

@@ -1,6 +1,12 @@
 <?php 
-    require_once '../new/userMapper.php';
-    require_once '../new/registerController.php';
+    require_once '../user/userMapper.php';
+    require_once '../user/registerLogic.php';
+
+    session_start();
+    if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && $_SESSION['role'] == 0){
+        header("location: ../index.php");
+        exit;
+    }
 
 ?>
 

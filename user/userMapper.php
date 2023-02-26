@@ -10,13 +10,11 @@ class UserMapper extends Database
     public function __construct()
     {
         $this->db=new Database;
-        // $this->conn = $this->getConnection();
     }
 
     public function getUserByID($userId)
     {
         $query = $this->db->pdo->prepare("SELECT * from user where userID=:id");
-        // $statement = $this->conn->prepare($this->query);
         $query->bindParam(":id", $userId);
         $query->execute();
          $result = $query->fetch(PDO::FETCH_ASSOC);
@@ -26,34 +24,15 @@ class UserMapper extends Database
     public function getUserByUsername($username)
     {
         $query =$this->db->pdo->prepare("SELECT * from user where username=:username");
-        // $statement = $this->conn->prepare($this->query);
         $query->bindParam(":username", $username);
         $query->execute();
         $result = $query->fetch(PDO::FETCH_ASSOC);
         return $result;
     }
 
-    
-    // public function LogIn($username,$password){
-    //     $query=$this->db->pdo->prepare("SELECT * from user where username=$username");
-    //     $row=mysqli_fetch_assoc($query);
-
-    //     if(mysqli_num_rows($query)>0){
-    //         if($password=$row["password"]){
-    //             alert("Jeni bere log in me sukses!")
-    //         }
-    //         else{
-    //             alert("Password eshte gabim!");
-    //         }
-    //     }
-    //     else{
-    //         alert("Ky username nuk ekziston!");
-    //     }
-    //     }
     public function getAllUsers()
     {
         $query =$this->db->pdo->prepare("SELECT * from user");
-        // $statement = $this->conn->prepare($this->query);
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
         return $result;
@@ -62,7 +41,6 @@ class UserMapper extends Database
     public function getAllSimpleUsers()
     {
         $query =$this->db->pdo->prepare("SELECT * from user where role=0");
-        // $statement = $this->conn->prepare($this->query);
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
         return $result;
@@ -71,7 +49,6 @@ class UserMapper extends Database
     public function getAllAdmins()
     {
         $query =$this->db->pdo->prepare("SELECT * from user where role=1");
-        // $statement = $this->conn->prepare($this->query);
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
         return $result;
@@ -80,7 +57,6 @@ class UserMapper extends Database
     public function insertUser(\Person $user)
     {
         $query =$this->db->pdo->prepare("INSERT into user (email, username, userpassword, role) values (:email,:username,:pass,:role)");
-        // $statement = $this->conn->prepare($this->query);
         $email = $user->getEmail();
         $username = $user->getUsername();
         $pass = password_hash($user->getPassword(), PASSWORD_BCRYPT);
@@ -96,7 +72,6 @@ class UserMapper extends Database
     {
         $query =$this->db->pdo->prepare("UPDATE user set username=:username, email=:email, userpassword=:userpassword where UserID=:id");
         var_dump($user);
-        // $statement = $this->conn->prepare($this->query);
         $email = $user->getEmail();
         $username = $user->getUsername();
         $userpassword = password_hash($user->getPassword(), PASSWORD_BCRYPT);
@@ -122,7 +97,6 @@ class UserMapper extends Database
     public function deleteUser($userId)
     {
         $query =$this->db->pdo->prepare("DELETE from user where userID=:id");
-        // $statement = $this->conn->prepare($this->query);
         $query->bindParam(":id", $userId);
         $query->execute();
         return header('Location: ../views/dashboard.php');

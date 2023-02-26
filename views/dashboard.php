@@ -2,7 +2,7 @@
   require_once '../LajmiController.php';
   require_once '../ProdController.php';
   require_once '../homeController.php';
-  include_once '../new/userMapper.php';
+  include_once '../user/userMapper.php';
   require_once '../kontaktController.php';
   
 

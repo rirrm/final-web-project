@@ -4,11 +4,8 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true){
     header("location: index.php");
     exit;
 }
-include "new/loginController.php";
-// if(isset($_GET['error'])){
-//   $error = $_GET['error'];
-//   echo '<script>alert("'.$error.'")</script>';
-// }
+include "user/loginLogic.php";
+
 ?>
  <!DOCTYPE html>
 <html lang="en">
@@ -36,12 +33,10 @@ if (isset($_POST['login-btn'])) {
                 }
                 else{
                     $passwordValid = "Password është gabim!";
-                // header("Location:../login.php?error=".urlencode($message));
             }
         }
         else{
             $usernameValidErr = "Username nuk ekziston!";
-            // header("Location:../login.php?error=".urlencode($message));
         }
     } 
 ?>

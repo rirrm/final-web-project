@@ -1,6 +1,6 @@
 <?php
-include_once 'new/adminClass.php';
-include_once 'new/simpleUserClass.php';
+include_once 'user/adminClass.php';
+include_once 'user/simpleUserClass.php';
 if (session_status() == PHP_SESSION_NONE) {
   session_start();
 }
@@ -40,7 +40,7 @@ if (session_status() == PHP_SESSION_NONE) {
                 
                 if (isset($_SESSION['loggedin'])) { 
                     
-                    echo '<li><a href="new/logout.php" class="hovernav">Log Out</a></li>';
+                    echo '<li><a href="user/logout.php" class="hovernav">Log Out</a></li>';
                     
                     if ($_SESSION['role'] == 1) { 
                       

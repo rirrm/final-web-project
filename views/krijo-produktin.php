@@ -1,6 +1,12 @@
 <?php 
     require_once '../ProdController.php';
 
+    session_start();
+    if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && $_SESSION['role'] == 0){
+        header("location: ../index.php");
+        exit;
+    }
+
     $produkti = new ProdController;
     if(isset($_POST['Submit'])){
         $produkti->insert($_POST);
